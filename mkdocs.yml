@@ -29,6 +29,7 @@ nav:
       - 宣告: keywords/declare.md
   - 內建函數:
       - 總覽: builtin-functions/index.md
+      - BarAdjusted: builtin-functions/baradjusted.md
   - 系統函數:
       - 總覽: system-functions/index.md
   - 報價欄位:
