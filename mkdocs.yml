@@ -1,0 +1,41 @@
+site_name: XSHelp
+site_description: XSHelp 文件中心
+site_url: ""
+
+theme:
+  name: material
+  language: zh-Hant
+  features:
+    - navigation.expand
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+plugins:
+  - search:
+      lang: zh
+
+nav:
+  - 首頁: index.md
+  - 檢視紀錄:
+      - 檢視紀錄: search-history/view.md
+  - 關鍵字:
+      - 總覽: keywords/index.md
+      - 忽略字: keywords/ignore.md
+      - 常數: keywords/constant.md
+      - 流程控制: keywords/flow.md
+      - 宣告: keywords/declare.md
+  - 內建函數:
+      - 總覽: builtin-functions/index.md
+  - 系統函數:
+      - 總覽: system-functions/index.md
+  - 報價欄位:
+      - 總覽: quote-fields/index.md
+  - 資料欄位:
+      - 總覽: data-fields/index.md
+  - 選股欄位:
+      - 總覽: screening-fields/index.md
+  - 搜尋記錄:
+      - 總覽: search-records/index.md
