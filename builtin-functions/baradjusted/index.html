@@ -11,6 +11,10 @@
       
       
       
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../../system-functions/">
       
       
         
@@ -21,7 +25,7 @@
     
     
       
-        <title>BarAdjusted（BarAdjusted 函數） - XSHelp</title>
+        <title>BarAdjusted - XSHelp</title>
       
     
     
@@ -62,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#baradjustedbaradjusted" class="md-skip">
+        <a href="#baradjusted" class="md-skip">
           跳轉至
         </a>
       
@@ -98,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              BarAdjusted（BarAdjusted 函數）
+              BarAdjusted
             
           </span>
         </div>
@@ -510,8 +514,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -522,13 +528,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
@@ -549,7 +553,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
@@ -592,10 +596,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../baradjusted.md" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BarAdjusted
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -611,6 +642,126 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目錄">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目錄
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#syntax" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📘 語法（Syntax）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📄 說明（Description）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📄 說明（Description）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ▶ 分鐘資料層級
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ▶ 日以上資料層級
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧩 使用範例（Examples）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧩 使用範例（Examples）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📌 範例 1：確認執行頻率必須是「還原日」頻率才可執行
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📌 範例 2：確認執行頻率必須是還原 5 分鐘線
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💡 補充說明（Notes）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1098,7 +1249,7 @@
   <a href="#syntax" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🧮 語法（Syntax）
+        📘 語法（Syntax）
       
     </span>
   </a>
@@ -1106,13 +1257,91 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#description" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📘 函數說明
+        📄 說明（Description）
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="📄 說明（Description）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ▶ 分鐘資料層級
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ▶ 日以上資料層級
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧩 使用範例（Examples）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧩 使用範例（Examples）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📌 範例 1：確認執行頻率必須是「還原日」頻率才可執行
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📌 範例 2：確認執行頻率必須是還原 5 分鐘線
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💡 補充說明（Notes）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1133,19 +1362,54 @@
 
 
 
-<h1 id="baradjustedbaradjusted">BarAdjusted（BarAdjusted 函數）</h1>
-<h2 id="syntax">🧮 語法（Syntax）</h2>
-<p>回傳執行腳本資料頻率是否為還原頻率。回傳布林值。
-若為還原頻率，則回傳「True」
-若不為還原頻率，則回傳「False」</p>
-<h2 id="_1">📘 函數說明</h2>
-<p>運用這個函數來判斷目前的執行頻率是否為還原頻率。</p>
-<p>在執行頻率為「分鐘」的資料表達為：</p>
-<p>如果資料頻率是還原5分鐘，則 BarInterval = 5，BarFreq = "Min"，BarBarAdjusted = true。
-如果資料頻率是5分鐘，則 BarInterval = 5，BarFreq = "Min"，BarBarAdjusted = false。
-在執行頻率為「日」以上頻率的資料表達為：</p>
-<p>如果資料是還原日線, 則 BarFreq = "AD", BarAdjusted = true。
-如果資料是日線, 則BarFreq = "D", BarAdjusted = false。</p>
+<h1 id="baradjusted">BarAdjusted（內建函數）</h1>
+<p>此函數用於判斷目前的執行頻率是否為還原頻率。</p>
+<hr />
+<h2 id="syntax">📘 語法（Syntax）</h2>
+<p>回傳執行腳本資料頻率是否為還原頻率。</p>
+<ul>
+<li>若為還原頻率，則回傳 <strong>True</strong></li>
+<li>若不是還原頻率，則回傳 <strong>False</strong></li>
+</ul>
+<hr />
+<h2 id="description">📄 說明（Description）</h2>
+<p>運用此函數可判斷目前的執行頻率是否為「還原頻率」。</p>
+<h3 id="_1">▶ 分鐘資料層級</h3>
+<ul>
+<li>
+<p>若原資料頻率 = 還原版本的 5 分鐘<br />
+　→ <code>BarInterval = 5</code>, <code>BarFreq = "Min"</code>, <code>BarAdjusted = true</code></p>
+</li>
+<li>
+<p>若原資料頻率 ≠ 還原版本 5 分鐘<br />
+　→ <code>BarInterval = 5</code>, <code>BarFreq = "Min"</code>, <code>BarAdjusted = false</code></p>
+</li>
+</ul>
+<h3 id="_2">▶ 日以上資料層級</h3>
+<ul>
+<li>
+<p>若原資料是還原日線<br />
+　→ <code>BarFreq = "AD"</code>, <code>BarAdjusted = true</code></p>
+</li>
+<li>
+<p>若原資料為一般日線<br />
+　→ <code>BarFreq = "D"</code>, <code>BarAdjusted = false</code></p>
+</li>
+</ul>
+<hr />
+<h2 id="examples">🧩 使用範例（Examples）</h2>
+<h3 id="1">📌 範例 1：確認執行頻率必須是「還原日」頻率才可執行</h3>
+<p>```pascal
+if BarFreq &lt;&gt; "D" or BarAdjusted &lt;&gt; True then 
+    raiseRunTimeError("僅支援還原日頻率");</p>
+<h3 id="2-5">📌 範例 2：確認執行頻率必須是還原 5 分鐘線</h3>
+<p>if BarInterval &lt;&gt; 5 
+or BarFreq &lt;&gt; "Min" 
+or BarAdjusted &lt;&gt; true then 
+    raiseRunTimeError("僅支援還原5分鐘線圖");</p>
+<h3 id="notes">💡 補充說明（Notes）</h3>
+<p>此函數常用於腳本限制執行頻率，使腳本能正確處理還原資料。</p>
+<p>常搭配 BarFreq、BarInterval 等函數一起使用。</p>
 
 
 
