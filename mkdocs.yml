@@ -6,12 +6,19 @@ theme:
   name: material
   language: zh-Hant
   features:
-    - navigation.expand
     - navigation.sections
+    - navigation.tracking
+    - navigation.prune
     - navigation.top
     - search.suggest
     - search.highlight
     - content.code.copy
+
+markdown_extensions:
+  - admonition
+  - footnotes
+  - pymdownx.superfences
+  - pymdownx.details
 
 plugins:
   - search:
@@ -20,7 +27,7 @@ plugins:
 nav:
   - 首頁: index.md
   - 檢視紀錄:
-      - 檢視紀錄: search-history/view.md
+      - 介紹: search-history/view.md
   - 關鍵字:
       - 總覽: keywords/index.md
       - 忽略字: keywords/ignore.md
@@ -30,6 +37,7 @@ nav:
   - 內建函數:
       - 總覽: builtin-functions/index.md
       - BarAdjusted: builtin-functions/baradjusted.md
+      - AbsValue: builtin-functions/AbsValue.md
   - 系統函數:
       - 總覽: system-functions/index.md
   - 報價欄位:
