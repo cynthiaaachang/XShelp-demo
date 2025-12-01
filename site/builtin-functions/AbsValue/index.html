@@ -11,6 +11,10 @@
       
       
       
+        <link rel="prev" href="../baradjusted/">
+      
+      
+        <link rel="next" href="../Alert/">
       
       
         
@@ -21,7 +25,7 @@
     
     
       
-        <title>函數說明手冊 - XSHelp</title>
+        <title>AbsValue - XSHelp</title>
       
     
     
@@ -62,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#absvalue" class="md-skip">
           跳轉至
         </a>
       
@@ -98,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              函數說明手冊
+              AbsValue
             
           </span>
         </div>
@@ -284,7 +288,7 @@
   <span class="md-ellipsis">
     
   
-    檢視紀錄
+    介紹
   
 
     
@@ -510,8 +514,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -524,11 +530,11 @@
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
@@ -549,7 +555,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
@@ -603,6 +609,142 @@
     
   
     BarAdjusted
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AbsValue
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AbsValue
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目錄">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目錄
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        語法
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        說明
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        範例
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Alert/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Alert
   
 
     
@@ -1095,18 +1237,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#absvalue" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        AbsValue（取得絕對值）
+        語法
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="AbsValue（取得絕對值）">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1116,20 +1257,15 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        參數
+        範例
       
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1150,16 +1286,31 @@
 
 
 
-<h1 id="_1">函數說明手冊</h1>
-<h2 id="absvalue">AbsValue（取得絕對值）</h2>
-<p><strong>回傳類型</strong>: 1\
-<strong>參數數量</strong>: 1</p>
-<h3 id="_2">說明</h3>
-<p>取絕對值。傳回無正負號的數值 回傳數值 = AbsValue(數值)</p>
-<h3 id="_3">參數</h3>
-<ul>
-<li><strong>數值</strong>（type: 1）</li>
-</ul>
+<h1 id="absvalue">AbsValue（內建函數） — 數學函數</h1>
+<h2 id="_1">語法</h2>
+<blockquote>
+<p>取得絕對值，傳回無正負號的數值<br />
+<strong>回傳數值 = AbsValue(數值)</strong></p>
+</blockquote>
+<hr />
+<h2 id="_2">說明</h2>
+<p><code>AbsValue</code> 函數用來計算傳入數值的絕對值。<br />
+例如：</p>
+<div class="highlight"><pre><span></span><code><span class="n">Value1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Abs</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">;</span>
+<span class="n">Value2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Abs</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span><span class="o">;</span>
+</code></pre></div>
+<p>在上述範例中，<code>Value1</code> 與 <code>Value2</code> 的數值皆為 3。</p>
+<hr />
+<h2 id="_3">範例</h2>
+<p>以下示範以 AbsValue 來計算兩條均線的差異。<br />
+由於腳本不關心差異的正負，只在意差距大小，因此使用 AbsValue 取得絕對值，不需考慮正負：</p>
+<div class="highlight"><pre><span></span><code><span class="n">Value1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Average</span><span class="p">(</span><span class="nb">Close</span><span class="o">,</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span><span class="o">;</span>
+<span class="n">Value2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Average</span><span class="p">(</span><span class="nb">Close</span><span class="o">,</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span><span class="o">;</span>
+<span class="n">Value3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AbsValue</span><span class="p">(</span><span class="n">Value1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Value2</span><span class="p">)</span><span class="o">;</span>
+
+<span class="k">If</span><span class="w"> </span><span class="n">Value3</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">0.01</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">Close</span><span class="w"> </span><span class="k">Then</span>
+<span class="w">    </span><span class="n">Ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="o">;</span>
+</code></pre></div>
 
 
 
@@ -1215,7 +1366,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.prune", "navigation.tracking", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u62f7\u8c9d", "clipboard.copy": "\u62f7\u8c9d", "search.result.more.one": "\u6b64\u9801\u5c1a\u6709 1 \u500b\u7b26\u5408\u7684\u9805\u76ee", "search.result.more.other": "\u6b64\u9801\u5c1a\u6709 # \u500b\u7b26\u5408\u7684\u9805\u76ee", "search.result.none": "\u6c92\u6709\u627e\u5230\u7b26\u5408\u689d\u4ef6\u7684\u7d50\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u689d\u4ef6\u7684\u7d50\u679c", "search.result.other": "\u627e\u5230 # \u500b\u7b26\u5408\u689d\u4ef6\u7684\u7d50\u679c", "search.result.placeholder": "\u9375\u5165\u4ee5\u958b\u59cb\u6aa2\u7d22", "search.result.term.missing": "\u7f3a\u5931", "select.version": "\u9078\u64c7\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.tracking", "navigation.prune", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u62f7\u8c9d", "clipboard.copy": "\u62f7\u8c9d", "search.result.more.one": "\u6b64\u9801\u5c1a\u6709 1 \u500b\u7b26\u5408\u7684\u9805\u76ee", "search.result.more.other": "\u6b64\u9801\u5c1a\u6709 # \u500b\u7b26\u5408\u7684\u9805\u76ee", "search.result.none": "\u6c92\u6709\u627e\u5230\u7b26\u5408\u689d\u4ef6\u7684\u7d50\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u689d\u4ef6\u7684\u7d50\u679c", "search.result.other": "\u627e\u5230 # \u500b\u7b26\u5408\u689d\u4ef6\u7684\u7d50\u679c", "search.result.placeholder": "\u9375\u5165\u4ee5\u958b\u59cb\u6aa2\u7d22", "search.result.term.missing": "\u7f3a\u5931", "select.version": "\u9078\u64c7\u7248\u672c"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>

@@ -38,6 +38,7 @@ nav:
       - 總覽: builtin-functions/index.md
       - BarAdjusted: builtin-functions/baradjusted.md
       - AbsValue: builtin-functions/AbsValue.md
+      - Alert: builtin-functions/Alert.md
   - 系統函數:
       - 總覽: system-functions/index.md
   - 報價欄位:
