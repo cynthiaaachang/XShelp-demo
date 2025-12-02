@@ -456,8 +456,6 @@ nav:
         - DiffBidAskVolumeXL: system-functions/量能相關/DiffBidAskVolumeXL.md
         - DiffTradeVolumeAtAskBid: system-functions/量能相關/DiffTradeVolumeAtAskBid.md
         - DiffUpDownVolume: system-functions/量能相關/DiffUpDownVolume.md
-  - 系統函數:
-      - 總覽: system-functions/README.md
   - 報價欄位:
       - 總覽: quote-fields/README.md
   - 資料欄位:
