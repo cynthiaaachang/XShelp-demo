@@ -6,9 +6,11 @@ theme:
   name: material
   language: zh-Hant
   features:
-    - navigation.sections
+    - navigation.sections     # 分類區塊（必要）
+    - navigation.indexes
+    - navigation.prune        # 自動收合不在使用中的分類（你要的功能）
     - navigation.tracking
-    - navigation.prune
+    - navigation.instant       # 切換頁面時不重新展開全部
     - navigation.top
     - search.suggest
     - search.highlight
@@ -29,23 +31,438 @@ nav:
   - 檢視紀錄:
       - 介紹: search-history/view.md
   - 關鍵字:
-      - 總覽: keywords/index.md
+      - 總覽: keywords/README.md
       - 忽略字: keywords/ignore.md
       - 常數: keywords/constant.md
       - 流程控制: keywords/flow.md
       - 宣告: keywords/declare.md
-  - 內建函數:
-      - 總覽: builtin-functions/index.md
-      - BarAdjusted: builtin-functions/baradjusted.md
-      - AbsValue: builtin-functions/AbsValue.md
-      - Alert: builtin-functions/Alert.md
+  - 內建函數: 
+      - builtin-functions/index.md
+      - 一般函數:
+        - BarAdjusted: builtin-functions/一般函數/BarAdjusted.md
+        - BarFreq: builtin-functions/一般函數/BarFreq.md
+        - BarInterval: builtin-functions/一般函數/BarInterval.md
+        - CallFunction: builtin-functions/一般函數/CallFunction.md
+        - CurrentBar: builtin-functions/一般函數/CurrentBar.md
+        - DataAlign: builtin-functions/一般函數/DataAlign.md
+        - ExecOffset: builtin-functions/一般函數/ExecOffset.md
+        - File: builtin-functions/一般函數/File.md
+        - GetBackBar: builtin-functions/一般函數/GetBackBar.md
+        - GetBarBack: builtin-functions/一般函數/GetBarBack.md
+        - GetBarOffset: builtin-functions/一般函數/GetBarOffset.md
+        - GetFieldStartOffset: builtin-functions/一般函數/GetFieldStartOffset.md
+        - GetFirstBarDate: builtin-functions/一般函數/GetFirstBarDate.md
+        - GetInfo: builtin-functions/一般函數/GetInfo.md
+        - GetSymbolFieldStartOffset: builtin-functions/一般函數/GetSymbolFieldStartOffset.md
+        - GetSymbolGroup: builtin-functions/一般函數/GetSymbolGroup.md
+        - GetTBMode: builtin-functions/一般函數/GetTBMode.md
+        - GetTotalBar: builtin-functions/一般函數/GetTotalBar.md
+        - GroupSize: builtin-functions/一般函數/GroupSize.md
+        - IsFirstCall: builtin-functions/一般函數/IsFirstCall.md
+        - IsLastBar: builtin-functions/一般函數/IsLastBar.md
+        - IsSessionFirstBar: builtin-functions/一般函數/IsSessionFirstBar.md
+        - IsSessionLastBar: builtin-functions/一般函數/IsSessionLastBar.md
+        - MaxBarsBack: builtin-functions/一般函數/MaxBarsBack.md
+        - NoPlot: builtin-functions/一般函數/NoPlot.md
+        - OutputField: builtin-functions/一般函數/OutputField.md
+        - Playsound: builtin-functions/一般函數/Playsound.md
+        - Plot: builtin-functions/一般函數/Plot.md
+        - PlotFill: builtin-functions/一般函數/PlotFill.md
+        - PlotK: builtin-functions/一般函數/PlotK.md
+        - PlotLine: builtin-functions/一般函數/PlotLine.md
+        - Print: builtin-functions/一般函數/Print.md
+        - RaiseRunTimeError: builtin-functions/一般函數/RaiseRunTimeError.md
+        - SetAlign: builtin-functions/一般函數/SetAlign.md
+        - SetBackBar: builtin-functions/一般函數/SetBackBar.md
+        - SetBarBack: builtin-functions/一般函數/SetBarBack.md
+        - SetBarFreq: builtin-functions/一般函數/SetBarFreq.md
+        - SetBarMode: builtin-functions/一般函數/SetBarMode.md
+        - SetFirstBarDate: builtin-functions/一般函數/SetFirstBarDate.md
+        - SetInputName: builtin-functions/一般函數/SetInputName.md
+        - SetOutputName: builtin-functions/一般函數/SetOutputName.md
+        - SetPlotLabel: builtin-functions/一般函數/SetPlotLabel.md
+        - SetRemoveOutlier: builtin-functions/一般函數/SetRemoveOutlier.md
+        - SetTBMode: builtin-functions/一般函數/SetTBMode.md
+        - SetTotalBar: builtin-functions/一般函數/SetTotalBar.md
+        - SymbolExchange: builtin-functions/一般函數/SymbolExchange.md
+        - SymbolType: builtin-functions/一般函數/SymbolType.md
+      - 交易函數:
+        - AddSpread: builtin-functions/交易函數/AddSpread.md
+        - Alert: builtin-functions/交易函數/Alert.md
+        - Buy: builtin-functions/交易函數/Buy.md
+        - CancelAllOrders: builtin-functions/交易函數/CancelAllOrders.md
+        - Cover: builtin-functions/交易函數/Cover.md
+        - DefaultBuyPrice: builtin-functions/交易函數/DefaultBuyPrice.md
+        - DefaultSellPrice: builtin-functions/交易函數/DefaultSellPrice.md
+        - Filled: builtin-functions/交易函數/Filled.md
+        - FilledAtBroker: builtin-functions/交易函數/FilledAtBroker.md
+        - FilledAvgPrice: builtin-functions/交易函數/FilledAvgPrice.md
+        - FilledEntryDate: builtin-functions/交易函數/FilledEntryDate.md
+        - FilledEntryTime: builtin-functions/交易函數/FilledEntryTime.md
+        - FilledEntryTimeMS: builtin-functions/交易函數/FilledEntryTimeMS.md
+        - FilledRecordBS: builtin-functions/交易函數/FilledRecordBS.md
+        - FilledRecordCount: builtin-functions/交易函數/FilledRecordCount.md
+        - FilledRecordDate: builtin-functions/交易函數/FilledRecordDate.md
+        - FilledRecordIsRealtime: builtin-functions/交易函數/FilledRecordIsRealtime.md
+        - FilledRecordPrice: builtin-functions/交易函數/FilledRecordPrice.md
+        - FilledRecordQty: builtin-functions/交易函數/FilledRecordQty.md
+        - FilledRecordTime: builtin-functions/交易函數/FilledRecordTime.md
+        - FilledRecordTimeMS: builtin-functions/交易函數/FilledRecordTimeMS.md
+        - IsListedSymbol: builtin-functions/交易函數/IsListedSymbol.md
+        - IsMarketPrice: builtin-functions/交易函數/IsMarketPrice.md
+        - Market: builtin-functions/交易函數/Market.md
+        - Position: builtin-functions/交易函數/Position.md
+        - Sell: builtin-functions/交易函數/Sell.md
+        - SetPosition: builtin-functions/交易函數/SetPosition.md
+        - Short: builtin-functions/交易函數/Short.md
+      - 字串函數:
+        - InStr: builtin-functions/字串函數/InStr.md
+        - LeftStr: builtin-functions/字串函數/LeftStr.md
+        - LowerStr: builtin-functions/字串函數/LowerStr.md
+        - MidStr: builtin-functions/字串函數/MidStr.md
+        - NumToStr: builtin-functions/字串函數/NumToStr.md
+        - RightStr: builtin-functions/字串函數/RightStr.md
+        - StrCompare: builtin-functions/字串函數/StrCompare.md
+        - StrEndWith: builtin-functions/字串函數/StrEndWith.md
+        - StrLen: builtin-functions/字串函數/StrLen.md
+        - StrSplit: builtin-functions/字串函數/StrSplit.md
+        - StrStartWith: builtin-functions/字串函數/StrStartWith.md
+        - StrToNum: builtin-functions/字串函數/StrToNum.md
+        - StrTrim: builtin-functions/字串函數/StrTrim.md
+        - Text: builtin-functions/字串函數/Text.md
+        - UpperStr: builtin-functions/字串函數/UpperStr.md
+      - 數學函數:
+        - AbsValue: builtin-functions/數學函數/AbsValue.md
+        - ArcCosine: builtin-functions/數學函數/ArcCosine.md
+        - ArcSine: builtin-functions/數學函數/ArcSine.md
+        - ArcTangent: builtin-functions/數學函數/ArcTangent.md
+        - AvgList: builtin-functions/數學函數/AvgList.md
+        - Ceiling: builtin-functions/數學函數/Ceiling.md
+        - Combination: builtin-functions/數學函數/Combination.md
+        - Cos: builtin-functions/數學函數/Cos.md
+        - Cosine: builtin-functions/數學函數/Cosine.md
+        - CoTangent: builtin-functions/數學函數/CoTangent.md
+        - ExpValue: builtin-functions/數學函數/ExpValue.md
+        - Factorial: builtin-functions/數學函數/Factorial.md
+        - Floor: builtin-functions/數學函數/Floor.md
+        - FracPortion: builtin-functions/數學函數/FracPortion.md
+        - IntPortion: builtin-functions/數學函數/IntPortion.md
+        - Log: builtin-functions/數學函數/Log.md
+        - MaxList: builtin-functions/數學函數/MaxList.md
+        - MaxList2: builtin-functions/數學函數/MaxList2.md
+        - MinList: builtin-functions/數學函數/MinList.md
+        - MinList2: builtin-functions/數學函數/MinList2.md
+        - Mod: builtin-functions/數學函數/Mod.md
+        - Neg: builtin-functions/數學函數/Neg.md
+        - NthMaxList: builtin-functions/數學函數/NthMaxList.md
+        - NthMinList: builtin-functions/數學函數/NthMinList.md
+        - Permutation: builtin-functions/數學函數/Permutation.md
+        - Pos: builtin-functions/數學函數/Pos.md
+        - Power: builtin-functions/數學函數/Power.md
+        - Random: builtin-functions/數學函數/Random.md
+        - Round: builtin-functions/數學函數/Round.md
+        - Sign: builtin-functions/數學函數/Sign.md
+        - Sin: builtin-functions/數學函數/Sin.md
+        - Sine: builtin-functions/數學函數/Sine.md
+        - Square: builtin-functions/數學函數/Square.md
+        - SquareRoot: builtin-functions/數學函數/SquareRoot.md
+        - SumList: builtin-functions/數學函數/SumList.md
+        - Tan: builtin-functions/數學函數/Tan.md
+        - Tangent: builtin-functions/數學函數/Tangent.md
+      - 日期函數:
+        - CurrentDate: builtin-functions/日期函數/CurrentDate.md
+        - DateAdd: builtin-functions/日期函數/DateAdd.md
+        - DateDiff: builtin-functions/日期函數/DateDiff.md
+        - DateToJulian: builtin-functions/日期函數/DateToJulian.md
+        - DateToString: builtin-functions/日期函數/DateToString.md
+        - DateValue: builtin-functions/日期函數/DateValue.md
+        - DayOfMonth: builtin-functions/日期函數/DayOfMonth.md
+        - DayOfWeek: builtin-functions/日期函數/DayOfWeek.md
+        - EncodeDate: builtin-functions/日期函數/EncodeDate.md
+        - FormatDate: builtin-functions/日期函數/FormatDate.md
+        - JulianToDate: builtin-functions/日期函數/JulianToDate.md
+        - Month: builtin-functions/日期函數/Month.md
+        - StringToDate: builtin-functions/日期函數/StringToDate.md
+        - WeekOfMonth: builtin-functions/日期函數/WeekOfMonth.md
+        - WeekOfYear: builtin-functions/日期函數/WeekOfYear.md
+        - Year: builtin-functions/日期函數/Year.md
+      - 時間函數:
+        - CurrentTime: builtin-functions/時間函數/CurrentTime.md
+        - CurrentTimeMS: builtin-functions/時間函數/CurrentTimeMS.md
+        - EncodeTime: builtin-functions/時間函數/EncodeTime.md
+        - FormatTime: builtin-functions/時間函數/FormatTime.md
+        - Hour: builtin-functions/時間函數/Hour.md
+        - MilliSecond: builtin-functions/時間函數/MilliSecond.md
+        - Minute: builtin-functions/時間函數/Minute.md
+        - Second: builtin-functions/時間函數/Second.md
+        - StringToTime: builtin-functions/時間函數/StringToTime.md
+        - TimeAdd: builtin-functions/時間函數/TimeAdd.md
+        - TimeDiff: builtin-functions/時間函數/TimeDiff.md
+        - TimeToString: builtin-functions/時間函數/TimeToString.md
+        - TimeValue: builtin-functions/時間函數/TimeValue.md
+      - 欄位函數:
+        - CheckField: builtin-functions/欄位函數/CheckField.md
+        - CheckSymbolField: builtin-functions/欄位函數/CheckSymbolField.md
+        - GetField: builtin-functions/欄位函數/GetField.md
+        - GetFieldDate: builtin-functions/欄位函數/GetFieldDate.md
+        - GetFieldPublishDate: builtin-functions/欄位函數/GetFieldPublishDate.md
+        - GetQuote: builtin-functions/欄位函數/GetQuote.md
+        - GetSymbolField: builtin-functions/欄位函數/GetSymbolField.md
+        - GetSymbolFieldDate: builtin-functions/欄位函數/GetSymbolFieldDate.md
+        - GetSymbolInfo: builtin-functions/欄位函數/GetSymbolInfo.md
+        - IsSupportField: builtin-functions/欄位函數/IsSupportField.md
+        - IsSupportSymbolField: builtin-functions/欄位函數/IsSupportSymbolField.md
+        - Symbol: builtin-functions/欄位函數/Symbol.md
+        - SymbolName: builtin-functions/欄位函數/SymbolName.md
+        - UserID: builtin-functions/欄位函數/UserID.md
+      - 陣列函數:
+        - Array_Compare: builtin-functions/陣列函數/Array_Compare.md
+        - Array_Copy: builtin-functions/陣列函數/Array_Copy.md
+        - Array_GetMaxIndex: builtin-functions/陣列函數/Array_GetMaxIndex.md
+        - Array_GetType: builtin-functions/陣列函數/Array_GetType.md
+        - Array_SetMaxIndex: builtin-functions/陣列函數/Array_SetMaxIndex.md
+        - Array_SetValRange: builtin-functions/陣列函數/Array_SetValRange.md
+        - Array_Sort: builtin-functions/陣列函數/Array_Sort.md
+        - Array_Sort2d: builtin-functions/陣列函數/Array_Sort2d.md
+        - Array_Sum: builtin-functions/陣列函數/Array_Sum.md
   - 系統函數:
-      - 總覽: system-functions/index.md
+      - system-functions/index.md
+      - Array函數:
+        - ArrayLinearRegSlope: system-functions/Array函數/ArrayLinearRegSlope.md
+        - ArrayMASeries: system-functions/Array函數/ArrayMASeries.md
+        - ArraySeries: system-functions/Array函數/ArraySeries.md
+        - ArrayXDaySeries: system-functions/Array函數/ArrayXDaySeries.md
+      - 交易相關:
+        - calcvwapdistribution: system-functions/交易相關/calcvwapdistribution.md
+        - EnterMarketCloseTime: system-functions/交易相關/EnterMarketCloseTime.md
+      - 價格取得:
+        - AvgPrice: system-functions/價格取得/AvgPrice.md
+        - CloseD: system-functions/價格取得/CloseD.md
+        - CloseH: system-functions/價格取得/CloseH.md
+        - CloseM: system-functions/價格取得/CloseM.md
+        - CloseQ: system-functions/價格取得/CloseQ.md
+        - CloseW: system-functions/價格取得/CloseW.md
+        - CloseY: system-functions/價格取得/CloseY.md
+        - FastHighest: system-functions/價格取得/FastHighest.md
+        - FastLowest: system-functions/價格取得/FastLowest.md
+        - HighD: system-functions/價格取得/HighD.md
+        - Highest: system-functions/價格取得/Highest.md
+        - HighH: system-functions/價格取得/HighH.md
+        - HighM: system-functions/價格取得/HighM.md
+        - HighQ: system-functions/價格取得/HighQ.md
+        - HighW: system-functions/價格取得/HighW.md
+        - HighY: system-functions/價格取得/HighY.md
+        - LowD: system-functions/價格取得/LowD.md
+        - Lowest: system-functions/價格取得/Lowest.md
+        - LowH: system-functions/價格取得/LowH.md
+        - LowM: system-functions/價格取得/LowM.md
+        - LowQ: system-functions/價格取得/LowQ.md
+        - LowW: system-functions/價格取得/LowW.md
+        - LowY: system-functions/價格取得/LowY.md
+        - OpenD: system-functions/價格取得/OpenD.md
+        - OpenH: system-functions/價格取得/OpenH.md
+        - OpenM: system-functions/價格取得/OpenM.md
+        - OpenQ: system-functions/價格取得/OpenQ.md
+        - OpenW: system-functions/價格取得/OpenW.md
+        - OpenY: system-functions/價格取得/OpenY.md
+        - TrueHigh: system-functions/價格取得/TrueHigh.md
+        - TrueLow: system-functions/價格取得/TrueLow.md
+        - TypicalPrice: system-functions/價格取得/TypicalPrice.md
+        - WeightedClose: system-functions/價格取得/WeightedClose.md
+      - 價格計算:
+        - Extremes: system-functions/價格計算/Extremes.md
+        - ExtremesArray: system-functions/價格計算/ExtremesArray.md
+        - FastHighestBar: system-functions/價格計算/FastHighestBar.md
+        - FastLowestBar: system-functions/價格計算/FastLowestBar.md
+        - HighDays: system-functions/價格計算/HighDays.md
+        - HighestArray: system-functions/價格計算/HighestArray.md
+        - HighestBar: system-functions/價格計算/HighestBar.md
+        - LowDays: system-functions/價格計算/LowDays.md
+        - LowestArray: system-functions/價格計算/LowestArray.md
+        - LowestBar: system-functions/價格計算/LowestBar.md
+        - MoM: system-functions/價格計算/MoM.md
+        - NthExtremes: system-functions/價格計算/NthExtremes.md
+        - NthExtremesArray: system-functions/價格計算/NthExtremesArray.md
+        - NthHighest: system-functions/價格計算/NthHighest.md
+        - NthHighestArray: system-functions/價格計算/NthHighestArray.md
+        - NthHighestBar: system-functions/價格計算/NthHighestBar.md
+        - NthLowest: system-functions/價格計算/NthLowest.md
+        - NthLowestArray: system-functions/價格計算/NthLowestArray.md
+        - NthLowestBar: system-functions/價格計算/NthLowestBar.md
+        - OHLCPeriodsAgo: system-functions/價格計算/OHLCPeriodsAgo.md
+        - QoQ: system-functions/價格計算/QoQ.md
+        - ReadTicks: system-functions/價格計算/ReadTicks.md
+        - SimpleHighest: system-functions/價格計算/SimpleHighest.md
+        - SimpleLowest: system-functions/價格計算/SimpleLowest.md
+        - YoY: system-functions/價格計算/YoY.md
+      - 價格關係:
+        - Average: system-functions/價格關係/Average.md
+        - AvgDeviation: system-functions/價格關係/AvgDeviation.md
+        - DwLimit: system-functions/價格關係/DwLimit.md
+        - EMA: system-functions/價格關係/EMA.md
+        - Range: system-functions/價格關係/Range.md
+        - RateOfChange: system-functions/價格關係/RateOfChange.md
+        - SimpleHighestBar: system-functions/價格關係/SimpleHighestBar.md
+        - SimpleLowestBar: system-functions/價格關係/SimpleLowestBar.md
+        - Summation: system-functions/價格關係/Summation.md
+        - TrueRange: system-functions/價格關係/TrueRange.md
+        - UpLimit: system-functions/價格關係/UpLimit.md
+        - WMA: system-functions/價格關係/WMA.md
+        - XAverage: system-functions/價格關係/XAverage.md
+      - 技術指標:
+        - ACC: system-functions/技術指標/ACC.md
+        - ADI: system-functions/技術指標/ADI.md
+        - ADO: system-functions/技術指標/ADO.md
+        - AR: system-functions/技術指標/AR.md
+        - ATR: system-functions/技術指標/ATR.md
+        - Bias: system-functions/技術指標/Bias.md
+        - BiasDiff: system-functions/技術指標/BiasDiff.md
+        - BollingerBand: system-functions/技術指標/BollingerBand.md
+        - BR: system-functions/技術指標/BR.md
+        - CCI: system-functions/技術指標/CCI.md
+        - CommodityChannel: system-functions/技術指標/CommodityChannel.md
+        - D_Value: system-functions/技術指標/D_Value.md
+        - DIF: system-functions/技術指標/DIF.md
+        - DirectionMovement: system-functions/技術指標/DirectionMovement.md
+        - DMO: system-functions/技術指標/DMO.md
+        - DPO: system-functions/技術指標/DPO.md
+        - EMP: system-functions/技術指標/EMP.md
+        - ERC: system-functions/技術指標/ERC.md
+        - HL_Osc: system-functions/技術指標/HL_Osc.md
+        - K_Value: system-functions/技術指標/K_Value.md
+        - KeltnerLB: system-functions/技術指標/KeltnerLB.md
+        - KeltnerMA: system-functions/技術指標/KeltnerMA.md
+        - KeltnerUB: system-functions/技術指標/KeltnerUB.md
+        - KO成交量擺盪指標: system-functions/技術指標/KO成交量擺盪指標.md
+        - KST確認指標: system-functions/技術指標/KST確認指標.md
+        - MA_Osc: system-functions/技術指標/MA_Osc.md
+        - MACD: system-functions/技術指標/MACD.md
+        - MAM: system-functions/技術指標/MAM.md
+        - MI: system-functions/技術指標/MI.md
+        - MO: system-functions/技術指標/MO.md
+        - Momentum: system-functions/技術指標/Momentum.md
+        - MTM: system-functions/技術指標/MTM.md
+        - MTM_MA: system-functions/技術指標/MTM_MA.md
+        - PercentR: system-functions/技術指標/PercentR.md
+        - PSY: system-functions/技術指標/PSY.md
+        - Q指標: system-functions/技術指標/Q指標.md
+        - RC: system-functions/技術指標/RC.md
+        - RSI: system-functions/技術指標/RSI.md
+        - RSV: system-functions/技術指標/RSV.md
+        - SAR: system-functions/技術指標/SAR.md
+        - Stochastic: system-functions/技術指標/Stochastic.md
+        - TechScore: system-functions/技術指標/TechScore.md
+        - TRIX: system-functions/技術指標/TRIX.md
+        - VA: system-functions/技術指標/VA.md
+        - VAO: system-functions/技術指標/VAO.md
+        - VHF: system-functions/技術指標/VHF.md
+        - VPT: system-functions/技術指標/VPT.md
+        - VR: system-functions/技術指標/VR.md
+        - VVA: system-functions/技術指標/VVA.md
+        - WAD: system-functions/技術指標/WAD.md
+      - 日期相關:
+        - AverageIF: system-functions/日期相關/AverageIF.md
+        - CountIf: system-functions/日期相關/CountIf.md
+        - CountIfARow: system-functions/日期相關/CountIfARow.md
+        - CrossOver: system-functions/日期相關/CrossOver.md
+        - CrossUnder: system-functions/日期相關/CrossUnder.md
+        - DateTime: system-functions/日期相關/DateTime.md
+        - Filter: system-functions/日期相關/Filter.md
+        - GetBarOffsetForYears: system-functions/日期相關/GetBarOffsetForYears.md
+        - IFF: system-functions/日期相關/IFF.md
+        - SummationIf: system-functions/日期相關/SummationIf.md
+        - TrueAll: system-functions/日期相關/TrueAll.md
+        - TrueAny: system-functions/日期相關/TrueAny.md
+        - TrueCount: system-functions/日期相關/TrueCount.md
+      - 期權相關:
+        - CoefficientR: system-functions/期權相關/CoefficientR.md
+        - Correlation: system-functions/期權相關/Correlation.md
+        - Covariance: system-functions/期權相關/Covariance.md
+        - RSquare: system-functions/期權相關/RSquare.md
+        - StandardDev: system-functions/期權相關/StandardDev.md
+        - VariancePS: system-functions/期權相關/VariancePS.md
+      - 統計分析:
+        - Angle: system-functions/統計分析/Angle.md
+        - LinearReg: system-functions/統計分析/LinearReg.md
+        - LinearRegAngle: system-functions/統計分析/LinearRegAngle.md
+        - LinearRegSlope: system-functions/統計分析/LinearRegSlope.md
+        - SwingHigh: system-functions/統計分析/SwingHigh.md
+        - SwingHighBar: system-functions/統計分析/SwingHighBar.md
+        - SwingLow: system-functions/統計分析/SwingLow.md
+        - SwingLowBar: system-functions/統計分析/SwingLowBar.md
+        - TimeSeriesForecast: system-functions/統計分析/TimeSeriesForecast.md
+        - TSELSindex: system-functions/統計分析/TSELSindex.md
+        - TSEMFI: system-functions/統計分析/TSEMFI.md
+        - UpShadow: system-functions/統計分析/UpShadow.md
+      - 趨勢分析:
+        - angleprice: system-functions/趨勢分析/angleprice.md
+        - BarsLast: system-functions/趨勢分析/BarsLast.md
+        - DaysToExpiration: system-functions/趨勢分析/DaysToExpiration.md
+        - DownTrend: system-functions/趨勢分析/DownTrend.md
+        - formatMQY: system-functions/趨勢分析/formatMQY.md
+        - GetLastTradeDate: system-functions/趨勢分析/GetLastTradeDate.md
+        - LastDayOfMonth: system-functions/趨勢分析/LastDayOfMonth.md
+        - NDaysAngle: system-functions/趨勢分析/NDaysAngle.md
+        - NthDayofMonth: system-functions/趨勢分析/NthDayofMonth.md
+        - UpTrend: system-functions/趨勢分析/UpTrend.md
+      - 跨頻率:
+        - BollingerBandWidth: system-functions/跨頻率/BollingerBandWidth.md
+        - PercentB: system-functions/跨頻率/PercentB.md
+        - TurnOverRate: system-functions/跨頻率/TurnOverRate.md
+        - xf_CrossOver: system-functions/跨頻率/xf_CrossOver.md
+        - xf_CrossUnder: system-functions/跨頻率/xf_CrossUnder.md
+        - xf_DirectionMovement: system-functions/跨頻率/xf_DirectionMovement.md
+        - xf_EMA: system-functions/跨頻率/xf_EMA.md
+        - xf_GetBoolean: system-functions/跨頻率/xf_GetBoolean.md
+        - xf_GetCurrentBar: system-functions/跨頻率/xf_GetCurrentBar.md
+        - xf_GetDTValue: system-functions/跨頻率/xf_GetDTValue.md
+        - xf_GetValue: system-functions/跨頻率/xf_GetValue.md
+        - xf_MACD: system-functions/跨頻率/xf_MACD.md
+        - xf_PercentR: system-functions/跨頻率/xf_PercentR.md
+        - xf_RSI: system-functions/跨頻率/xf_RSI.md
+        - xf_Stochastic: system-functions/跨頻率/xf_Stochastic.md
+        - xf_WeightedClose: system-functions/跨頻率/xf_WeightedClose.md
+        - xf_XAverage: system-functions/跨頻率/xf_XAverage.md
+        - xfMin_CrossOver: system-functions/跨頻率/xfMin_CrossOver.md
+        - xfMin_CrossUnder: system-functions/跨頻率/xfMin_CrossUnder.md
+        - xfMin_DirectionMovement: system-functions/跨頻率/xfMin_DirectionMovement.md
+        - xfMin_EMA: system-functions/跨頻率/xfMin_EMA.md
+        - xfMin_GetBoolean: system-functions/跨頻率/xfMin_GetBoolean.md
+        - xfMin_GetCurrentBar: system-functions/跨頻率/xfMin_GetCurrentBar.md
+        - xfMin_GetDTValue: system-functions/跨頻率/xfMin_GetDTValue.md
+        - xfMin_GetValue: system-functions/跨頻率/xfMin_GetValue.md
+        - xfMin_MACD: system-functions/跨頻率/xfMin_MACD.md
+        - xfmin_MTM: system-functions/跨頻率/xfmin_MTM.md
+        - xfMin_PercentR: system-functions/跨頻率/xfMin_PercentR.md
+        - xfMin_RSI: system-functions/跨頻率/xfMin_RSI.md
+        - xfMin_Stochastic: system-functions/跨頻率/xfMin_Stochastic.md
+        - xfMin_WeightedClose: system-functions/跨頻率/xfMin_WeightedClose.md
+        - xfMin_XAverage: system-functions/跨頻率/xfMin_XAverage.md
+      - 邏輯判斷:
+        - blackscholesmodel: system-functions/邏輯判斷/blackscholesmodel.md
+        - BSDelta: system-functions/邏輯判斷/BSDelta.md
+        - BSGamma: system-functions/邏輯判斷/BSGamma.md
+        - BSPrice: system-functions/邏輯判斷/BSPrice.md
+        - BSTheta: system-functions/邏輯判斷/BSTheta.md
+        - BSVega: system-functions/邏輯判斷/BSVega.md
+        - DaysToExpirationTF: system-functions/邏輯判斷/DaysToExpirationTF.md
+        - HVolatility: system-functions/邏輯判斷/HVolatility.md
+        - IsXLOrder: system-functions/邏輯判斷/IsXLOrder.md
+        - IsXOrder: system-functions/邏輯判斷/IsXOrder.md
+        - IVolatility: system-functions/邏輯判斷/IVolatility.md
+        - NORMSDIST: system-functions/邏輯判斷/NORMSDIST.md
+      - 量能相關:
+        - DiffBidAskVolumeLxL: system-functions/量能相關/DiffBidAskVolumeLxL.md
+        - DiffBidAskVolumeXL: system-functions/量能相關/DiffBidAskVolumeXL.md
+        - DiffTradeVolumeAtAskBid: system-functions/量能相關/DiffTradeVolumeAtAskBid.md
+        - DiffUpDownVolume: system-functions/量能相關/DiffUpDownVolume.md
+  - 系統函數:
+      - 總覽: system-functions/README.md
   - 報價欄位:
-      - 總覽: quote-fields/index.md
+      - 總覽: quote-fields/README.md
   - 資料欄位:
-      - 總覽: data-fields/index.md
+      - 總覽: data-fields/README.md
   - 選股欄位:
-      - 總覽: screening-fields/index.md
+      - 總覽: screening-fields/README.md
   - 搜尋記錄:
-      - 總覽: search-records/index.md
+      - 總覽: search-records/view.md
