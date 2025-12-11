@@ -1,7 +1,6 @@
 # Array_SetMaxIndex – （內建函數） <kbd>陣列函數</kbd>
 
 ## 語法
-
 > 重新設定陣列的大小  
 > 僅支援一維陣列  
 > Array_SetMaxIndex(陣列，陣列內的元素個數)  
@@ -9,7 +8,6 @@
 ---
 
 ## 說明
-
 設定[動態陣列](api.aspx?a=array&b=keyword)的大小。
 
 ```pascal

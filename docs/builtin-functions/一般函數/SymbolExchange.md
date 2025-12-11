@@ -1,14 +1,12 @@
 # SymbolExchange – （內建函數） <kbd>一般函數</kbd>
 
 ## 語法
-
 > 目前執行商品的交易所編碼  
 > **回傳代碼 = SymbolExchange**  
 
 ---
 
 ## 說明
-
 SymbolExchange函數回傳目前執行商品的交易所編碼，例如 "TW"。
 
 當回傳值為"TW"時，表示商品屬於台灣證券交易所（上市&上櫃）。

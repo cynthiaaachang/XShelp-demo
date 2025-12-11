@@ -1,7 +1,6 @@
 # xfMin_XAverage – （系統函數） <kbd>跨頻率</kbd>
 
 ## 語法
-
 > 計算指定頻率的指數移動平均。  
 > **回傳數值=xfMin_Xaverage(頻率,數列,期數)**  
 > 傳入三個參數:  
@@ -13,7 +12,6 @@
 ---
 
 ## 說明
-
 xfMin_XAverage是[xf_XAverage](api.aspx?a=xf_XAverage&b=sys) 函數的跨頻率加強版本，增加了指定分鐘頻率的參數，可以計算指定分鐘頻率的XAverage值。
 
 範例：

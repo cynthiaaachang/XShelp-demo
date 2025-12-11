@@ -1,7 +1,6 @@
 # Highest – （系統函數） <kbd>價格取得</kbd>
 
 ## 語法
-
 > 計算序列資料的最大值。  
 > **回傳數值=Highest(數列,期數)**  
 > 傳入二個參數:  
@@ -11,7 +10,6 @@
 ---
 
 ## 說明
-
 以最新一筆資料為基準點，輸入要計算的期數，然後計算過去期數的極大值。
 
 Highest函數與[FastHighest](api.aspx?a=FastHighest&b=sys)函數的運算方式一致，都是用 [Extremes](api.aspx?a=Extremes&b=sys) 函數抓極大值。

@@ -1,7 +1,6 @@
 # IsFirstCall – （內建函數） <kbd>一般函數</kbd>
 
 ## 語法
-
 > **回傳目前計算的K棒（currentbar）是否為事件的第一次洗價**  
 > 傳入事件字串：" "、"Bar"、"Date"、"Realtime"、"RealBar"  
 > **回傳布林值=IsFirstCall**  
@@ -9,7 +8,6 @@
 ---
 
 ## 說明
-
 isfirstcall(" ")：此次執行的第一次洗價
 
 isfirstcall("Bar")：此根 Bar 的第一次洗價

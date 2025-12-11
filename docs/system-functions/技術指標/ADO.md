@@ -1,14 +1,12 @@
 # ADO – （系統函數） <kbd>技術指標</kbd>
 
 ## 語法
-
 > 計算聚散擺盪指標值。  
 > **回傳數值=ADO**  
 
 ---
 
 ## 說明
-
 ADO指標的原文是Accumulation／Distribution Oscillator，直譯為「聚散擺盪」指標。
 
 計算公式如下：

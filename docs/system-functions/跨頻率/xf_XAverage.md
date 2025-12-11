@@ -1,7 +1,6 @@
 # xf_XAverage – （系統函數） <kbd>跨頻率</kbd>
 
 ## 語法
-
 > 計算指定頻率的指數移動平均。  
 > **回傳數值=xf_XAverage(頻率,數列,期數)**  
 > 傳入三個參數:  
@@ -12,7 +11,6 @@
 ---
 
 ## 說明
-
 xf_XAverage是[XAverage](api.aspx?a=XAverage&b=sys) 函數的跨頻率版本，增加了指定頻率的參數，可以計算指定頻率的XAverage值。
 
 範例：

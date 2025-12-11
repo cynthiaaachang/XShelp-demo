@@ -1,14 +1,12 @@
 # Array_SetValRange – （內建函數） <kbd>陣列函數</kbd>
 
 ## 語法
-
 > 把陣列內某段元素改成指定的數值  
 > Array_SetValRange(陣列，開始位置，結束位置，新設定的數值)  
 
 ---
 
 ## 說明
-
 Array_SetValRange需要傳入四個參數:
 
 - 第一個參數是陣列變數，

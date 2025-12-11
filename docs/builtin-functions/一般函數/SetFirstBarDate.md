@@ -1,14 +1,12 @@
 # SetFirstBarDate – （內建函數） <kbd>一般函數</kbd>
 
 ## 語法
-
 > 指定腳本執行時第一筆資料的日期(不支援交易腳本)  
 > SetFirstBarDate(資料開始日期)  
 
 ---
 
 ## 說明
-
 關於資料讀取範圍的定義，請參考[資料讀取範圍與腳本執行的關係](http://www.xq.com.tw/lesson/xspractice/資料讀取範圍與腳本執行的關係/)。
 
 SetFirstBarDate 函數用於控制腳本執行時，所使用的第一個資料的日期，從而確定資料讀取的起始範圍。

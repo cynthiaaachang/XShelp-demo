@@ -1,14 +1,12 @@
 # ATR – （系統函數） <kbd>技術指標</kbd>
 
 ## 語法
-
 > 計算平均真實區間指標值。  
 > **回傳數值=ATR(期數)**  
 
 ---
 
 ## 說明
-
 平均真實區間是真實區間（True Range）的平均。
 
 真實區間是韋爾達（J. W. Wilder）於1978年發表於New Concepts in Technical Trading Systems中測量價格波動性的方法。

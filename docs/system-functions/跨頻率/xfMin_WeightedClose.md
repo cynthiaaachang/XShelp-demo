@@ -1,7 +1,6 @@
 # xfMin_WeightedClose – （系統函數） <kbd>跨頻率</kbd>
 
 ## 語法
-
 > 計算指定頻率的加權平均收盤價。  
 > **回傳數值=xfMin_WeightedClose(頻率)**  
 > 傳入一個參數:  
@@ -11,7 +10,6 @@
 ---
 
 ## 說明
-
 xfMin_WeightedClose是[xf_WeightedClose](api.aspx?a=xf_WeightedClose&b=sys) 函數的跨頻率加強版本，增加了指定分鐘頻率的參數，可以計算指定分鐘頻率的WeightedClose值。
 
 範例：

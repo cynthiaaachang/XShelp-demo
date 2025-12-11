@@ -1,7 +1,6 @@
 # DiffTradeVolumeAtAskBid – （系統函數） <kbd>量能相關</kbd>
 
 ## 語法
-
 > 傳回「分時買賣力」的數值  
 > **回傳數值 = DiffTradeVolumeAtAskBid**  
 > 僅支援分鐘與日頻率（含還原）  
@@ -10,6 +9,5 @@
 ---
 
 ## 說明
-
 DiffTradeVolumeAtAskBid為分時買賣力的函數，
 該函數運算出來的數值，與XS指標的「分時買賣力」指標相同。

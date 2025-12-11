@@ -1,14 +1,12 @@
 # FilledAvgPrice – （內建函數） <kbd>交易函數</kbd>
 
 ## 語法
-
 > 取得商品目前的未平倉成本。  
 > **Value1 = FilledAvgPrice**  
 
 ---
 
 ## 說明
-
 FilledAvgPrice回傳目前商品的未平倉成本。如果目前Filled數值是0的話，則FilledAvgPrice回傳0，否則FilledAvgPrice回傳的是一個大於等於0的數值，與Filled的方向無關。
 
 __範例__

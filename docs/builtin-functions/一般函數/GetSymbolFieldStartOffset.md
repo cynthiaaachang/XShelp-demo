@@ -1,7 +1,6 @@
 # GetSymbolFieldStartOffset – （內建函數） <kbd>一般函數</kbd>
 
 ## 語法
-
 > 判斷欄位初始點  
 > **欄位筆數 = GetSymbolFieldStartOffset("ID", "欄位名稱")**  
 > **欄位筆數 = GetSymbolFieldStartOffset("ID", "欄位名稱","頻率")**  
@@ -13,7 +12,6 @@
 ---
 
 ## 說明
-
 GetSymbolFieldStartOffset是GetFieldStartOffset語法的延伸，在取得欄位相關資料時可以指定商品，透過這個函數可以在腳本中取得其他商品的欄位筆數。
 
 以下是一個簡單的範例：

@@ -1,14 +1,12 @@
 # DateToJulian – （內建函數） <kbd>日期函數</kbd>
 
 ## 語法
-
 > 將YYYYMMDD的8碼日期轉成儒略日(Julian)格式  
 > **儒略日 = DateToJulian(日期數值)**  
 
 ---
 
 ## 說明
-
 在XS系統內日期的標準格式為YYYYMMDD的8碼數字。如果需要執行日期的計算時，一般可以使用[DateAdd函數](api.aspx?a=dateadd&b=bif)或是[DateDiff函數](api.aspx?a=datediff&b=bif)。
 
 另外一種計算方式，則是把日期轉換成[儒略日格式](https://zh.wikipedia.org/wiki/%E5%84%92%E7%95%A5%E6%97%A5)後再來計算。因為儒略日格式採用**絕對天數**的方式來紀錄日期數值，所以可以直接做數值運算，然後再使用[JulianToDate函數](api.aspx?a=JulianToDate&b=bif)轉成YYYYMMDD的8碼日期格式。

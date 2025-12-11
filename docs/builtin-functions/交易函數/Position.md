@@ -1,14 +1,12 @@
 # Position – （內建函數） <kbd>交易函數</kbd>
 
 ## 語法
-
 > 取得目前商品的部位。  
 > **Value1 = Position**  
 
 ---
 
 ## 說明
-
 Position代表的是自動交易策略內目前執行商品的預期部位。
 
 Position是一個整數，可以大於0、等於0、也可以小於0。從自動交易腳本內，透過呼叫交易指令，例如[SetPosition](api.aspx?a=SetPosition&b=bif)、[Buy](api.aspx?a=Buy&b=bif)、[Sell](api.aspx?a=Sell&b=bif)，可以改變Position的數值，當數值變大時，代表要執行買進的動作，當數值變小時則代表要執行賣出的動作。

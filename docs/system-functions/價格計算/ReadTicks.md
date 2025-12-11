@@ -1,15 +1,14 @@
 # ReadTicks – （系統函數） <kbd>價格計算</kbd>
 
 ## 語法
-
 > 讀取自上次腳本執行後到目前為止的所有 Tick 成交資料  
 > **本次執行更新的資料筆數 = ReadTicks ( 輸出儲存Tick資料的二維陣列, 輸出最後一筆讀到的Tick序號 ) ;**  
+>   
 > 回測在1分鐘頻率時，不支援模擬逐筆洗價  
 
 ---
 
 ## 說明
-
 請先參考 [台股逐筆撮合的連續成交Tick序列](https://www.xq.com.tw/lesson/xspractice/%e5%8f%b0%e8%82%a1%e9%80%90%e7%ad%86%e6%92%ae%e5%90%88%e7%9a%84%e7%a9%bf%e5%83%b9tick/) ，關於腳本洗價方式與MultiTick的概念。
 
 ### **參數設定說明**
@@ -44,7 +43,7 @@ var: intrabarpersist readtick_cookie(0);
 
 - 每一行欄位資訊
 	
-```pascal
+	```pascal
 	tick_array[..., 1] = Date
 	tick_array[..., 2] = Time（MultiTick 合併後，此為序列的統一時間）
 	tick_array[..., 3] = Close（若是 MultiTick，則為序列中最後一筆的成交價）
@@ -56,7 +55,7 @@ var: intrabarpersist readtick_cookie(0);
 	tick_array[..., 9] = 結束Offset（若是MultiTick，為最後一筆與最新一筆Tick的相對位置。若是單筆成交，此值與欄位 8 相同）
 	tick_array[..., 10] = 成交量加總（該筆成交的總量。若是 MultiTick，此為序列中所有 Tick 的成交量總和）
 	tick_array[..., 11] = 成交值加總（ 該筆成交的總金額(元)。若是 MultiTick，此為序列中所有 Tick 的成交值總和）
-```
+	```
 - 請注意
 
 	- 不完整序列

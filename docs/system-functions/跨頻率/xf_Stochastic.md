@@ -1,7 +1,6 @@
 # xf_Stochastic – （系統函數） <kbd>跨頻率</kbd>
 
 ## 語法
-
 > 計算指定頻率的KD指標。  
 > **回傳數值=xf_Stochastic(頻率,資料期數,K值平滑期數,D值平滑期數,輸出RSV值,輸出K值,輸出D值)**  
 > 傳入八個參數:  
@@ -16,7 +15,6 @@
 ---
 
 ## 說明
-
 xf_Stochastic是[Stochastic](api.aspx?a=Stochastic&b=sys) 函數的跨頻率版本，增加了指定頻率的參數，可以計算指定頻率的Stochastic值。
 
 範例：

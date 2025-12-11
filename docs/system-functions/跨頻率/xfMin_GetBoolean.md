@@ -1,7 +1,6 @@
 # xfMin_GetBoolean – （系統函數） <kbd>跨頻率</kbd>
 
 ## 語法
-
 > 引用指定頻率的數值。  
 > **回傳數值=xfMin_GetBoolean(頻率,數列,期別)**  
 > 傳入三個參數:  
@@ -13,7 +12,6 @@
 ---
 
 ## 說明
-
 在同一個頻率時，我們可以直接利用**變數[3]**取得前3期的變數值。當資料頻率不同時（跨頻率），我們就需要使用xfMin_GetValue或xfMin_GetBoolean來取得之前的變數值。若變數是數值時，要用xfMin_GetValue；若變數是布林值時，要用xfMin_GetBoolean。支援跨分鐘頻率。
 
 ```pascal

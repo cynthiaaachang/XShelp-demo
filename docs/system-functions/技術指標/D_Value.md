@@ -1,7 +1,6 @@
 # D_Value – （系統函數） <kbd>技術指標</kbd>
 
 ## 語法
-
 > 計算KD指標中的D值。  
 > **回傳數值=D_Value(資料期數,D值平滑期數)**  
 > 傳入二個參數:  
@@ -11,7 +10,6 @@
 ---
 
 ## 說明
-
 KD指標為美國交易員George Lane所創，原名為Stochastic Oscillator。 
 D_Value即隨機指標中的慢速線（%D）。
 

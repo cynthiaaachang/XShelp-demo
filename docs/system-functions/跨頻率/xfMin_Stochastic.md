@@ -1,7 +1,6 @@
 # xfMin_Stochastic – （系統函數） <kbd>跨頻率</kbd>
 
 ## 語法
-
 > 計算指定頻率的KD指標。  
 > **回傳數值=xfMin_Stochastic(頻率,資料期數,K值平滑期數,D值平滑期數,輸出RSV值,輸出K值,輸出D值)**  
 > 傳入八個參數:  
@@ -17,7 +16,6 @@
 ---
 
 ## 說明
-
 xfMin_Stochastic是[xf_Stochastic](api.aspx?a=xf_Stochastic&b=sys) 函數的跨頻率加強版本，增加了指定分鐘頻率的參數，可以計算指定分鐘頻率的Stochastic值。
 
 範例：

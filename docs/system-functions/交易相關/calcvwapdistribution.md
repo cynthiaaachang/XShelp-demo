@@ -1,14 +1,12 @@
 # calcvwapdistribution – （系統函數） <kbd>交易相關</kbd>
 
 ## 語法
-
 > 計算過去N日的VWAP分佈。  
 > calcvwapdistribution(計算天數，開始時間，結束時間，一個array)  
 
 ---
 
 ## 說明
-
 計算過去N日的VWAP分佈
 
 請傳入

@@ -1,7 +1,6 @@
 # SetInputName – （內建函數） <kbd>一般函數</kbd>
 
 ## 語法
-
 > 設定輸入參數(Input)的顯示名稱  
 > SetInputName(序號, 顯示名稱)  
 > SetInputName1(顯示名稱)  
@@ -9,7 +8,6 @@
 ---
 
 ## 說明
-
 在XS語法內可以使用[Input語法](api.aspx?a=input)來設定腳本輸入的參數。
 
 ```pascal

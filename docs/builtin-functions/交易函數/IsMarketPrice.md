@@ -1,14 +1,12 @@
 # IsMarketPrice – （內建函數） <kbd>交易函數</kbd>
 
 ## 語法
-
 > 判斷傳入的價格是否是市價  
 > **Condition1 = IsMarketPrice(value1)**  
 
 ---
 
 ## 說明
-
 商品的五檔委買委賣價，或是成交明細資料(Tick資料)的買進價，賣出價有可能會是市價。如果腳本希望判斷這種情形時，可以使用IsMarketPrice這個函數。
 
 ```pascal

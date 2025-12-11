@@ -1,7 +1,6 @@
 # xfMin_PercentR – （系統函數） <kbd>跨頻率</kbd>
 
 ## 語法
-
 > 計算指定頻率的威廉指標值。  
 > **回傳數值=xfMin_PercentR(頻率,期數)**  
 > 傳入二個參數:  
@@ -12,7 +11,6 @@
 ---
 
 ## 說明
-
 xfMin_PercentR是[xf_PercentR](api.aspx?a=xf_PercentR&b=sys) 函數的跨頻率加強版本，增加了指定分鐘頻率的參數，可以計算指定分鐘頻率的PercentR值。
 
 範例：

@@ -1,14 +1,12 @@
 # RaiseRunTimeError – （內建函數） <kbd>一般函數</kbd>
 
 ## 語法
-
 > 用來中斷執行中的程式  
 > RaiseRunTimeError(錯誤訊息)  
 
 ---
 
 ## 說明
-
 當腳本遇到任何重大錯誤時，可以使用RaiseRunTimeError函數來終止腳本的執行。
 
 舉例而言:

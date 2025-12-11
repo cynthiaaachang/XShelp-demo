@@ -1,7 +1,6 @@
 # SetOutputName – （內建函數） <kbd>一般函數</kbd>
 
 ## 語法
-
 > 指定選股的輸出欄位標題  
 > SetOutputName(序號, 欄位標題)  
 > SetOutputName1(欄位標題)  
@@ -9,7 +8,6 @@
 ---
 
 ## 說明
-
 在XS語法內可以使用[OutputField指令](api.aspx?a=outputfield&b=bif)來產生選股時的輸出欄位。
 
 預設的輸出欄位的標題為 "欄位"加上"序號"，例如"欄位1", "欄位2"等。為了讓輸出報表更清楚，可以使用SetOutputName指令來設定輸出欄位的名稱。

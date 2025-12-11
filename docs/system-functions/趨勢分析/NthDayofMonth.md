@@ -1,7 +1,6 @@
 # NthDayofMonth – （系統函數） <kbd>趨勢分析</kbd>
 
 ## 語法
-
 > 取得指定日期後第N個星期幾的日期。  
 > **回傳數值=NthDayOfMonth(參考日期,第幾個,星期幾)**  
 > 傳入三個參數:  
@@ -12,7 +11,6 @@
 ---
 
 ## 說明
-
 NthDayOfMonth回傳的數值是YYYYMMDD的日期格式。
 
 範例：

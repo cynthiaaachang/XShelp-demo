@@ -1,7 +1,6 @@
 # xf_PercentR – （系統函數） <kbd>跨頻率</kbd>
 
 ## 語法
-
 > 計算指定頻率的威廉指標值。  
 > **回傳數值=xf_PercentR(頻率,期數)**  
 > 傳入二個參數:  
@@ -11,7 +10,6 @@
 ---
 
 ## 說明
-
 xf_PercentR是[PercentR](api.aspx?a=PercentR&b=sys) 函數的跨頻率版本，增加了指定頻率的參數，可以計算指定頻率的PercentR值。
 
 範例：

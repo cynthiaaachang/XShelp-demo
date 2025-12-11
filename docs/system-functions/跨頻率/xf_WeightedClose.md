@@ -1,7 +1,6 @@
 # xf_WeightedClose – （系統函數） <kbd>跨頻率</kbd>
 
 ## 語法
-
 > 計算指定頻率的加權平均收盤價。  
 > **回傳數值=xf_WeightedClose(頻率)**  
 > 傳入一個參數:  
@@ -10,7 +9,6 @@
 ---
 
 ## 說明
-
 xf_WeightedClose是[WeightedClose](api.aspx?a=WeightedClose&b=sys) 函數的跨頻率版本，增加了指定頻率的參數，可以計算指定頻率的WeightedClose值。
 
 範例：

@@ -1,14 +1,12 @@
 # SetTotalBar – （內建函數） <kbd>一般函數</kbd>
 
 ## 語法
-
 > 指定腳本執行時的資料讀取範圍  
 > SetTotalBar(資料讀取筆數)  
 
 ---
 
 ## 說明
-
 關於**資料讀取範圍**的定義，請參考[資料讀取範圍與腳本執行的關係](http://www.xq.com.tw/lesson/xspractice/資料讀取範圍與腳本執行的關係/)。
 
 SetTotalBar 用於設定腳本執行時，讀取的歷史K棒數量。

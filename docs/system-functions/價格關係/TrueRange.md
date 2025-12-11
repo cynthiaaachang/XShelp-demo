@@ -1,14 +1,12 @@
 # TrueRange – （系統函數） <kbd>價格關係</kbd>
 
 ## 語法
-
 > 傳回當根K棒的真實區間。  
 > **回傳數值=TrueRange**  
 
 ---
 
 ## 說明
-
 真實區間是韋爾達（J. W. Wilder）於1978年發表於New Concepts in Technical Trading Systems中測量價格波動性的方法。
 
 根據韋爾達的定義，真實區間為下列三項中的最大值：

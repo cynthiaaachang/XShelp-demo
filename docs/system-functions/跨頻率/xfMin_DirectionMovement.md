@@ -1,7 +1,6 @@
 # xfMin_DirectionMovement – （系統函數） <kbd>跨頻率</kbd>
 
 ## 語法
-
 > 計算跨頻率DMI指標。  
 > **回傳數值=xfMin_DirectionMovement(頻率,期數,輸出+DI值,輸出-DI值,輸出ADX值)**  
 > 傳入五個參數:  
@@ -15,7 +14,6 @@
 ---
 
 ## 說明
-
 xfMin_DirectionMovement是[xf_DirectionMovement](api.aspx?a=xf_DirectionMovement&b=sys) 函數的跨頻率加強版本，增加了指定分鐘頻率的參數，可以計算指定分鐘頻率的DMI值。
 
 範例：

@@ -1,7 +1,6 @@
 # SetRemoveOutlier – （內建函數） <kbd>一般函數</kbd>
 
 ## 語法
-
 > 排除Rank語法中的離群值商品，被排除的商品不會進入排行。  
 > **SetRemoveOutlier("zscore", value:=3)**  
 > 傳入兩個參數：  
@@ -11,7 +10,6 @@
 ---
 
 ## 說明
-
 此語法會讓離群值商品在排行前就被排除，也不會被納入計算其他屬性，例如 avgvalue。
 
 此語法需寫在 rank 語法內，且每一個rank只能有一個。

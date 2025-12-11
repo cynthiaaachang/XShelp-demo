@@ -1,7 +1,6 @@
 # ArrayLinearRegSlope – （系統函數） <kbd>Array函數</kbd>
 
 ## 語法
-
 > 利用陣列來計算的線性迴歸的斜率。  
 > **回傳陣列=ArrayLinearRegSlope(陣列,期數)**  
 > 傳入二個參數:  
@@ -11,5 +10,4 @@
 ---
 
 ## 說明
-
 利用最小平方法計算線性迴歸的斜率。

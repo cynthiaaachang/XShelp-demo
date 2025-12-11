@@ -1,14 +1,12 @@
 # Filled – （內建函數） <kbd>交易函數</kbd>
 
 ## 語法
-
 > 取得目前商品的成交部位。  
 > **Value1 = Filled**  
 
 ---
 
 ## 說明
-
 Filled代表的是自動交易策略內目前執行商品的<u>成交部位</u>。
 
 Filled是一個整數，可以大於0、等於0、也可以小於0。從自動交易腳本內，透過呼叫交易指令，例如[SetPosition](api.aspx?a=SetPosition&b=bif)、[Buy](api.aspx?a=Buy&b=bif)、[Sell](api.aspx?a=Sell&b=bif)，來執行交易的動作。系統執行交易指令之後，[Position](api.aspx?a=Position&b=bif)的數值會跟著異動，如果個交易指令成交之後，則Filled的數值也會跟著異動。

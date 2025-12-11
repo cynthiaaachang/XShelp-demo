@@ -1,14 +1,12 @@
 # Array_GetMaxIndex – （內建函數） <kbd>陣列函數</kbd>
 
 ## 語法
-
 > 取得陣列內的元素個數  
 > **元素個數 = Array_GetMaxIndex(陣列變數)**  
 
 ---
 
 ## 說明
-
 回傳陣列內的元素個數。
 
 ```pascal

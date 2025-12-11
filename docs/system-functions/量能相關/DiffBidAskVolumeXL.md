@@ -1,7 +1,6 @@
 # DiffBidAskVolumeXL – （系統函數） <kbd>量能相關</kbd>
 
 ## 語法
-
 > 傳回「近15分鐘特大單買賣超」的張數  
 > **回傳數值 = DiffBidAskVolumeXL**  
 > 僅支援1分鐘頻率與台股商品。  
@@ -9,7 +8,6 @@
 ---
 
 ## 說明
-
 DiffBidAskVolumeXL為近15分鐘特大單買賣超張數的函數。
 
 範例：

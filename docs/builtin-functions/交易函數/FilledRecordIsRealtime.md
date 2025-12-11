@@ -1,14 +1,12 @@
 # FilledRecordIsRealtime – （內建函數） <kbd>交易函數</kbd>
 
 ## 語法
-
 > 判斷某一筆成交紀錄是發生在策略部位計算區間或是即時K棒洗價區間  
 > **Value1 = FilledRecordIsRealtime(idx)**  
 
 ---
 
 ## 說明
-
 FilledRecordIsRealtime必須傳入一個index參數，代表要取得第幾筆成交紀錄的日期，index的範圍從1開始(第一筆)，不能超過FilledRecordCount。
 
 如果策略啟動了[策略部位計算功能](https://www.xq.com.tw/lesson/xsat/xsat_overview/#fun)的話，在執行過程內系統會使用歷史資料來模擬策略的交易狀態。

@@ -1,7 +1,6 @@
 # Lowest – （系統函數） <kbd>價格取得</kbd>
 
 ## 語法
-
 > 計算序列資料的最小值。  
 > **回傳數值=Lowest(數列,期數)**  
 > 傳入二個參數:  
@@ -11,7 +10,6 @@
 ---
 
 ## 說明
-
 以最新一筆資料為基準點，輸入要計算的期數，然後計算過去期數的極小值。
 
 Lowest函數與[FastLowest](api.aspx?a=FastLowest&b=sys)函數的運算方式一致，都是用 [Extremes](api.aspx?a=Extremes&b=sys) 函數抓極小值。

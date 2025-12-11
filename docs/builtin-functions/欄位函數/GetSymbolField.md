@@ -1,7 +1,6 @@
 # GetSymbolField – （內建函數） <kbd>欄位函數</kbd>
 
 ## 語法
-
 > 讀取系統內的欄位資料  
 > **欄位數值 = GetSymbolField("ID", "欄位名稱")**  
 > **欄位數值 = GetSymbolField("ID", "欄位名稱","頻率")**  
@@ -13,7 +12,6 @@
 ---
 
 ## 說明
-
 GetSymbolField是GetField語法的延伸，在取得欄位相關資料時可以指定商品，透過這個函數可以在腳本中取得其他商品的欄位資料。
 
 

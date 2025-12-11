@@ -1,7 +1,6 @@
 # GetFieldStartOffset – （內建函數） <kbd>一般函數</kbd>
 
 ## 語法
-
 > 判斷欄位初始點  
 > **欄位筆數 = GetFieldStartOffset("欄位名稱")**  
 > **欄位筆數 = GetFieldStartOffset("欄位名稱", "頻率")**  
@@ -13,7 +12,6 @@
 ---
 
 ## 說明
-
 請注意，回傳欄位的筆數，是依照傳入的欄位頻率來計算，可能與目前腳本執行的K棒頻率不同。
 例如目前可能是跑日線，然後GetFieldStartOffset要查的是月頻率欄位，此時 GetFieldStartOffset所回傳的是月頻率欄位有幾筆。
 

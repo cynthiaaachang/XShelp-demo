@@ -1,7 +1,6 @@
 # xfMin_MACD – （系統函數） <kbd>跨頻率</kbd>
 
 ## 語法
-
 > 計算指定頻率的MACD指標值。  
 > **回傳數值=xfMin_MACD(頻率,數列,短期數,長期數,MACD平滑期數,輸出DIF值,輸出MACD值,輸出OSC值)**  
 > 傳入八個參數:  
@@ -18,7 +17,6 @@
 ---
 
 ## 說明
-
 xfMin_MACD是[xf_MACD](api.aspx?a=xf_MACD&b=sys) 函數的跨頻率加強版本，增加了指定分鐘頻率的參數，可以計算指定分鐘頻率的MACD值。
 
 範例：

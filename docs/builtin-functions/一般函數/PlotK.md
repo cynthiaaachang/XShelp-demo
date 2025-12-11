@@ -1,7 +1,6 @@
 # PlotK – （內建函數） <kbd>一般函數</kbd>
 
 ## 語法
-
 > 在腳本運算的橫軸位置上畫出K棒。  
 > PlotK(序列編號, vOpen, vHigh, vLow, vClose)  
 > PlotK(序列編號, vOpen, vHigh, vLow, vClose, "序列名稱")  
@@ -9,7 +8,6 @@
 ---
 
 ## 說明
-
 序列編號是1~999的數值，與目前XS Plot的序列編號相同。
 序列名稱是非必需的參數，如果不傳的話，預設的序列名稱為"Plot"+序列編號，例如”Plot2”。
 vOpen, vHigh, vLow, vClose 對應的是K棒的開高低收。

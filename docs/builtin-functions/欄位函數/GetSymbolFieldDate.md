@@ -1,7 +1,6 @@
 # GetSymbolFieldDate – （內建函數） <kbd>欄位函數</kbd>
 
 ## 語法
-
 > 讀取系統內的欄位的資料日期  
 > **欄位資料日期 = GetSymbolFieldDate("ID", "欄位名稱")**  
 > **欄位資料日期 = GetSymbolFieldDate("ID", "欄位名稱","頻率")**  
@@ -10,7 +9,6 @@
 ---
 
 ## 說明
-
 GetSymbolFieldDate是GetFieldDate語法的延伸，在取得欄位相關資料的日期時可以指定商品，透過這個函數可以在腳本中取得其他商品欄位的資料日期。
 
 GetSymbolFieldDate函數可以傳入三個參數：
