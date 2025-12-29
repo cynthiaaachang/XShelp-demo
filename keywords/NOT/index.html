@@ -21,7 +21,7 @@
     
     
       
-        <title>系統內建常數 - XSHelp</title>
+        <title>NOT - XSHelp</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#not" class="md-skip">
           跳轉至
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              系統內建常數
+              NOT
             
           </span>
         </div>
@@ -6386,6 +6386,25 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目錄
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        說明
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -6401,57 +6420,17 @@
 
 
 
-<h1 id="_1">系統內建常數</h1>
-<p>以下為系統目前提供的內建常數名稱，以及常數所對應的數值。</p>
-<table>
-<thead>
-<tr>
-<th>常數名稱</th>
-<th>數值</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Friday</td>
-<td></td>
-</tr>
-<tr>
-<td>Monday</td>
-<td></td>
-</tr>
-<tr>
-<td>PI</td>
-<td></td>
-</tr>
-<tr>
-<td>Saturday</td>
-<td></td>
-</tr>
-<tr>
-<td>Sunday</td>
-<td></td>
-</tr>
-<tr>
-<td>Thursday</td>
-<td></td>
-</tr>
-<tr>
-<td>Tuesday</td>
-<td></td>
-</tr>
-<tr>
-<td>Wednesday</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p>在腳本內可以直接使用常數名稱，以增加可讀性，例如：</p>
-<div class="highlight"><pre><span></span><code>Value1 = PI;
+<h1 id="not">NOT</h1>
+<h2 id="_1">說明</h2>
+<p>NOT語法回傳運算式的相反值。</p>
+<p>請看以下的範例程式：</p>
+<p><div class="highlight"><pre><span></span><code>If Close &gt; Close[1] Then Ret = 1;
 </code></pre></div>
-<p>跟</p>
-<div class="highlight"><pre><span></span><code>Value1 = 3.14159
+這個例子會在Close值大於Close的前期值時設定Ret為1。</p>
+<p>如果使用者希望的是在Close值<strong>不是</strong>大於Close的前期值時才設定Ret為1的話，則可以寫成：</p>
+<div class="highlight"><pre><span></span><code>If Not (Close &gt; Close[1]) Then Ret = 1;
 </code></pre></div>
-<p>是一樣的意思，可是程式讀起來會比較清楚。</p>
+<p>上述的範例會在Close值<strong>不是</strong>大於Close的前期值時設定Ret為1。</p>
 
 
 

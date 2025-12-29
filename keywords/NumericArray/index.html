@@ -21,7 +21,7 @@
     
     
       
-        <title>系統內建常數 - XSHelp</title>
+        <title>NumericArray - XSHelp</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#numericarray" class="md-skip">
           跳轉至
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              系統內建常數
+              NumericArray
             
           </span>
         </div>
@@ -6401,57 +6401,20 @@
 
 
 
-<h1 id="_1">系統內建常數</h1>
-<p>以下為系統目前提供的內建常數名稱，以及常數所對應的數值。</p>
-<table>
-<thead>
-<tr>
-<th>常數名稱</th>
-<th>數值</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Friday</td>
-<td></td>
-</tr>
-<tr>
-<td>Monday</td>
-<td></td>
-</tr>
-<tr>
-<td>PI</td>
-<td></td>
-</tr>
-<tr>
-<td>Saturday</td>
-<td></td>
-</tr>
-<tr>
-<td>Sunday</td>
-<td></td>
-</tr>
-<tr>
-<td>Thursday</td>
-<td></td>
-</tr>
-<tr>
-<td>Tuesday</td>
-<td></td>
-</tr>
-<tr>
-<td>Wednesday</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p>在腳本內可以直接使用常數名稱，以增加可讀性，例如：</p>
-<div class="highlight"><pre><span></span><code>Value1 = PI;
+<h1 id="numericarray">NumericArray</h1>
+<p>(僅適用於函數腳本內)</p>
+<p>NumericArray 語法用來定義函數腳本的參數為數值陣列型態。</p>
+<div class="highlight"><pre><span></span><code>Input: MyNumericArray[X](NumericArray);
 </code></pre></div>
-<p>跟</p>
-<div class="highlight"><pre><span></span><code>Value1 = 3.14159
+<div class="highlight"><pre><span></span><code>For Value1 = 1 to X
+  Value2 = Value2 + MyNumericArray[Value1];
 </code></pre></div>
-<p>是一樣的意思，可是程式讀起來會比較清楚。</p>
+<p>NumericArray 與Numeric最大的差異是在Input語法內陣列變數名稱之後還需要定義<em>[陣列大小變數]。在上例內[X]</em>就宣告了一個變數 X，他的數值會是傳入的陣列的大小(陣列內有多少數值)。</p>
+<p>透過這個機制，函數內就可以知道傳入的陣列的大小，然後利用這個資訊來正確的判斷可以讀取哪些數值。 上述範例內使用一個 For迴圈來加總傳入陣列的每個數值，迴圈的範圍是從1開始，直到 X 結束。</p>
+<p>如果需要傳入的陣列是二維的，則語法如下:</p>
+<div class="highlight"><pre><span></span><code>Input: MyNumericArray[X,Y](NumericArray);
+</code></pre></div>
+<p>在上例內中括弧內必須填入兩個變數(X, Y)，這兩個變數的數值將會分別是傳入的陣列的行數跟欄數。</p>
 
 
 

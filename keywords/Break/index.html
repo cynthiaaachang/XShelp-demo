@@ -21,7 +21,7 @@
     
     
       
-        <title>系統內建常數 - XSHelp</title>
+        <title>Break - XSHelp</title>
       
     
     
@@ -61,11 +61,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#_1" class="md-skip">
-          跳轉至
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -98,7 +93,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              系統內建常數
+              Break
             
           </span>
         </div>
@@ -6383,8 +6378,6 @@
   
   
   
-    
-  
   
 </nav>
                   </div>
@@ -6401,57 +6394,18 @@
 
 
 
-<h1 id="_1">系統內建常數</h1>
-<p>以下為系統目前提供的內建常數名稱，以及常數所對應的數值。</p>
-<table>
-<thead>
-<tr>
-<th>常數名稱</th>
-<th>數值</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Friday</td>
-<td></td>
-</tr>
-<tr>
-<td>Monday</td>
-<td></td>
-</tr>
-<tr>
-<td>PI</td>
-<td></td>
-</tr>
-<tr>
-<td>Saturday</td>
-<td></td>
-</tr>
-<tr>
-<td>Sunday</td>
-<td></td>
-</tr>
-<tr>
-<td>Thursday</td>
-<td></td>
-</tr>
-<tr>
-<td>Tuesday</td>
-<td></td>
-</tr>
-<tr>
-<td>Wednesday</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p>在腳本內可以直接使用常數名稱，以增加可讀性，例如：</p>
-<div class="highlight"><pre><span></span><code>Value1 = PI;
+  <h1>Break</h1>
+
+<p>Break</p>
+<p>Break 指令的用處是控制迴圈執行時跳出迴圈的時機點，一般是用在For 迴圈或是While 迴圈內。</p>
+<p>以下是 For 迴圈的範例:</p>
+<div class="highlight"><pre><span></span><code>i = 0;
+For i = 0 to 10
+Begin
+    If Close[i] &lt; 20 Then Break;
+End;
 </code></pre></div>
-<p>跟</p>
-<div class="highlight"><pre><span></span><code>Value1 = 3.14159
-</code></pre></div>
-<p>是一樣的意思，可是程式讀起來會比較清楚。</p>
+<p>一般而言上面的迴圈會執行11次(從I = 0 到 10)。可是在執行過程內，如果某一期的Close欄位值比20小的話，就會馬上跳出 For 迴圈。</p>
 
 
 

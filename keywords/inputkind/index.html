@@ -21,7 +21,7 @@
     
     
       
-        <title>系統內建常數 - XSHelp</title>
+        <title>inputkind - XSHelp</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#inputkind" class="md-skip">
           跳轉至
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              系統內建常數
+              inputkind
             
           </span>
         </div>
@@ -6401,57 +6401,27 @@
 
 
 
-<h1 id="_1">系統內建常數</h1>
-<p>以下為系統目前提供的內建常數名稱，以及常數所對應的數值。</p>
-<table>
-<thead>
-<tr>
-<th>常數名稱</th>
-<th>數值</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Friday</td>
-<td></td>
-</tr>
-<tr>
-<td>Monday</td>
-<td></td>
-</tr>
-<tr>
-<td>PI</td>
-<td></td>
-</tr>
-<tr>
-<td>Saturday</td>
-<td></td>
-</tr>
-<tr>
-<td>Sunday</td>
-<td></td>
-</tr>
-<tr>
-<td>Thursday</td>
-<td></td>
-</tr>
-<tr>
-<td>Tuesday</td>
-<td></td>
-</tr>
-<tr>
-<td>Wednesday</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p>在腳本內可以直接使用常數名稱，以增加可讀性，例如：</p>
-<div class="highlight"><pre><span></span><code>Value1 = PI;
+<h1 id="inputkind">inputkind</h1>
+<p>input宣告的時候，可以使用 inputkind 這個命名參數(named parameter)，用來控制系統參數設定的介面(UI)。再搭配 Dict 、 DateRange 或 SymbolPrice 函數來產生對應的內容。</p>
+<p>Dict 產生選項的範例如下：</p>
+<div class="highlight"><pre><span></span><code>input: IndexPomUnit(1, &quot;大盤融資單位&quot;, inputkind:=Dict([&quot;金額&quot;,1],[&quot;張數&quot;,2]));
 </code></pre></div>
-<p>跟</p>
-<div class="highlight"><pre><span></span><code>Value1 = 3.14159
+<p>在上述的範例內宣告了一個名為 IndexPomUnit 的參數，用來存放計算大盤融資的數值，不過此數值的單位有 金額 與 張數 兩種，故可以使用 inputkind 搭配 Dict 函數，就能在介面設定單位為金額或者張數，此範例預設單位為金額。</p>
+<p>Image: inputkind_dict</p>
+<p>也可以改寫成以下範例，使用字串型態的方式來撰寫相關程式碼：
+<div class="highlight"><pre><span></span><code>input: IndexPomUnit(&quot;Amount&quot;, &quot;大盤融資單位&quot;, inputkind:=Dict([&quot;金額&quot;,&quot;Amount&quot;],[&quot;張數&quot;,&quot;Sheets&quot;]));
+</code></pre></div></p>
+<p>DateRange 產生日期範圍選項的範例如下：</p>
+<div class="highlight"><pre><span></span><code>input:FdifferenceDate(20180301,&quot;外資買賣超查詢日期&quot;,inputkind:=daterange(20160301,20190301,&quot;D&quot;));
+//daterange(最小查詢日期,最大查詢日期,&quot;支援日/週/月/季/半年/年頻率&quot;)
 </code></pre></div>
-<p>是一樣的意思，可是程式讀起來會比較清楚。</p>
+<p>在上述的範例內宣告了一個名為 FdifferenceDate 的參數，用來存放外資買賣超查詢日期的數值，就能方便在介面上勾選日曆選項使用，此範例預設查詢日期為2018年03月01日。</p>
+<p>Image: inputkind_date range</p>
+<p>SymbolPrice 產生 Open、High、Low、Close 四個選項的範例如下：
+<div class="highlight"><pre><span></span><code>input:OHLC_Opti(200,&quot;價格：&quot;,inputkind:=SymbolPrice());
+</code></pre></div></p>
+<p>在上述的範例中，宣告了一個名為 OHLC_Opti 的參數，用來存放價格的數值，就能方便在介面上勾選 Open、High、Low、Close 四個選項使用。</p>
+<p>Image: inputkind_symbolprice</p>
 
 
 

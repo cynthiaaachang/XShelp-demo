@@ -21,7 +21,7 @@
     
     
       
-        <title>系統內建常數 - XSHelp</title>
+        <title>Array - XSHelp</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#array" class="md-skip">
           跳轉至
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              系統內建常數
+              Array
             
           </span>
         </div>
@@ -6401,57 +6401,54 @@
 
 
 
-<h1 id="_1">系統內建常數</h1>
-<p>以下為系統目前提供的內建常數名稱，以及常數所對應的數值。</p>
-<table>
-<thead>
-<tr>
-<th>常數名稱</th>
-<th>數值</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Friday</td>
-<td></td>
-</tr>
-<tr>
-<td>Monday</td>
-<td></td>
-</tr>
-<tr>
-<td>PI</td>
-<td></td>
-</tr>
-<tr>
-<td>Saturday</td>
-<td></td>
-</tr>
-<tr>
-<td>Sunday</td>
-<td></td>
-</tr>
-<tr>
-<td>Thursday</td>
-<td></td>
-</tr>
-<tr>
-<td>Tuesday</td>
-<td></td>
-</tr>
-<tr>
-<td>Wednesday</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p>在腳本內可以直接使用常數名稱，以增加可讀性，例如：</p>
-<div class="highlight"><pre><span></span><code>Value1 = PI;
+<h1 id="array">Array</h1>
+<p>Array 語法用來宣告一個陣列變數，同時設定陣列的大小以及陣列內儲存數值的資料型態(也可以寫成 Arrays)。</p>
+<p>所謂陣列就是一個可以儲存 多個數值 的變數，陣列內儲存數值的個數，以及數值的資料型態可以透過Array語法來定義。</p>
+<p>系統提供兩種控制陣列數值個數的方式。第一種方式是固定個數，語法如下:</p>
+<div class="highlight"><pre><span></span><code>Array: NumArray[10](0);
+Array: StrArray[10](&quot;&quot;);
+Array: BoolArray[10](True);
 </code></pre></div>
-<p>跟</p>
-<div class="highlight"><pre><span></span><code>Value1 = 3.14159
+<p>在以上的範例設定了三個陣列變數：</p>
+<ul>
+<li>NumArray，這是一個數值陣列，總共有10個數值，每個數值的初始值都是0，</li>
+<li>StrArray，這是一個字串陣列，總共有10個數值，每個數值的初始值都是""，</li>
+<li>BoolArray，這是一個布林值陣列，總共有10個數值，每個數值的初始值都是True</li>
+</ul>
+<p>以下是NumArray在宣告後的示意圖。</p>
+<p>Image: 示意圖</p>
+<p>如果要存取NumArray的話，則使用以下的語法：
+<div class="highlight"><pre><span></span><code>NumArray[1] = 5;
+Value1 = NumArray[1];
+</code></pre></div></p>
+<p>在中括弧[]內傳入的數值稱之為 索引值，索引值的範圍由1開始，一直到陣列宣告的最大個數。</p>
+<p>如果陣列的大小無法預先知道的話，則可以使用第二種語法來宣告陣列：</p>
+<div class="highlight"><pre><span></span><code>Array: NumArray[](0);
+Array: StrArray[](&quot;&quot;);
+Array: BoolArray[](True);
 </code></pre></div>
-<p>是一樣的意思，可是程式讀起來會比較清楚。</p>
+<p>請注意在上述語法內並未指定陣列的個數 ([] 內並沒有任何數值)。此時陣列已經被宣告，也已經定義這個陣列內可以存放的資料的格式，可以此時陣列還不可以被使用。</p>
+<p>等到程式知道陣列的實際所需大小時，程式必須透過 Array_SetMaxIndex 函數來設定陣列的大小。</p>
+<div class="highlight"><pre><span></span><code>Var: Count(0);
+Array: NumArray[](0);
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>If High &gt; Highest(High,20)[1] Then Count = Count + 1;
+Array_SetMaxIndex(NumArray, Count);
+NumArray[Count] = High;
+</code></pre></div>
+<p>在上述範例內每當創近20期新高時 (High &gt; Highest(High,20)[1])，NumArray就會多存放當時的新高價。由於無法預先知道所需要儲存的個數，所以使用上述語法來動態設定陣列的大小。</p>
+<p>以上所定義的陣列變數都是屬於一維陣列，也就是說一個陣列變數內有多個數值，使用時像序列般的方式來存取。如果需要陣列內的數值可以以類似矩陣的方式來存取的話，則可以以下列語法來宣告二維陣列。</p>
+<div class="highlight"><pre><span></span><code>Array: NumArray[10,2](0);
+</code></pre></div>
+<p>在上例內，中括弧[]內有兩個數值，分別是10跟2。透過這樣子的語法我們宣告了一個二維陣列，他的內容如下:</p>
+<p>Image: 示意圖</p>
+<p>我們可以想像一個二維陣列就好像是一個Excel的表格一樣。中括弧內的第一個數值宣告這個表格的行數，第二個數字則是宣告表格的欄數。</p>
+<p>當需要存取二維陣列時、我們使用以下的語法:
+<div class="highlight"><pre><span></span><code>NumArray[5,1] = 10;
+Value1 = NumArray[1,2];
+</code></pre></div></p>
+<p>存取時需要傳入兩個索引值，索引值的範圍是從１開始，不能超過陣列的行數跟欄數。</p>
+<p>※ Array 維度最多 9 個。元素數量最多 7000。例如：Array:LimitArray[a,b,c,d,e,f,g,h,i]; 則 (a+1) * (b+1) * (c+1) * (d+1) * (e+1) * (f+1) * (g+1) * (h+1) * (i+1) 所得到的元素值最多為 7000 個。</p>
 
 
 

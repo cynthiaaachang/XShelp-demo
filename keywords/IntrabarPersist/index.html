@@ -21,7 +21,7 @@
     
     
       
-        <title>系統內建常數 - XSHelp</title>
+        <title>IntrabarPersist - XSHelp</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#intrabarpersist" class="md-skip">
           跳轉至
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              系統內建常數
+              IntrabarPersist
             
           </span>
         </div>
@@ -6386,6 +6386,25 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目錄
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#barbar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        這個行為是為了要保證逐筆洗價時最後算出來的數值只跟這一筆bar的價位有關，而不是跟這一筆bar被執行了多少次有關。
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -6401,57 +6420,35 @@
 
 
 
-<h1 id="_1">系統內建常數</h1>
-<p>以下為系統目前提供的內建常數名稱，以及常數所對應的數值。</p>
-<table>
-<thead>
-<tr>
-<th>常數名稱</th>
-<th>數值</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Friday</td>
-<td></td>
-</tr>
-<tr>
-<td>Monday</td>
-<td></td>
-</tr>
-<tr>
-<td>PI</td>
-<td></td>
-</tr>
-<tr>
-<td>Saturday</td>
-<td></td>
-</tr>
-<tr>
-<td>Sunday</td>
-<td></td>
-</tr>
-<tr>
-<td>Thursday</td>
-<td></td>
-</tr>
-<tr>
-<td>Tuesday</td>
-<td></td>
-</tr>
-<tr>
-<td>Wednesday</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p>在腳本內可以直接使用常數名稱，以增加可讀性，例如：</p>
-<div class="highlight"><pre><span></span><code>Value1 = PI;
+<h1 id="intrabarpersist">IntrabarPersist</h1>
+<p>IntrabarPersist 語法用來控制變數數值在執行時的變化邏輯。</p>
+<p>在程式執行時，變數的數值會自動延續前一筆bar最後的計算值。</p>
+<p>以下是一個簡單的示意圖，說明變數的數值在執行時的變化情形。</p>
+<p>Image</p>
+<p>注意到在上圖內變數的數值都會從上一筆執行後的結果延續到下一筆bar。</p>
+<p>如果上述的腳本被設定成逐筆洗價的話(也就是說同一筆bar可能執行很多次)，則變數的數值變化情形如下:</p>
+<p>Image</p>
+<p>請注意，雖然第二筆bar因為價位變化的關係被執行了兩次，可是每次執行時，Counter變數的數值還是都會先變成上一筆bar最後執行的結果(1)之後才開始執行第二筆bar。(圖示內紅色標記處)。所以雖然第二筆bar執行了兩次，Counter在離開第二筆bar的時时候的數值還是為2。</p>
+<h4 id="barbar">這個行為是為了要保證逐筆洗價時最後算出來的數值只跟這一筆bar的價位有關，而不是跟這一筆bar被執行了多少次有關。</h4>
+<p>可是在某些情境底下可能需要保留最後一次計算後的數值(不管是否有換bar)，此時就可以使用 IntrabarPersist 的語法:</p>
+<div class="highlight"><pre><span></span><code>input: atVolume(100); setinputname(1,&quot;大單門檻&quot;);
 </code></pre></div>
-<p>跟</p>
-<div class="highlight"><pre><span></span><code>Value1 = 3.14159
+<div class="highlight"><pre><span></span><code>variable: intrabarpersist Xtime(0);         //計數器
 </code></pre></div>
-<p>是一樣的意思，可是程式讀起來會比較清楚。</p>
+<div class="highlight"><pre><span></span><code>Volumestamp = q_DailyVolume;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>if Date &gt; date[1] then Xtime = 0; // 開盤那根要歸0次數
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>if q_tickvolume &gt; 100 then Xtime += 1; // 量夠大就加1次
+</code></pre></div>
+<p><div class="highlight"><pre><span></span><code>if Xtime &gt; 10  then
+begin
+    ret = 1;
+    Xtime = 0;
+end;
+</code></pre></div>
+上述範例是一個警示腳本，使用日線頻率，逐筆洗價模式來執行。我們希望當大單(目前定義成單筆成交量 &gt; 100張)的個數超過10之後就觸發。由於是日線模式，所以每次重新執行時 XTime都會變成0，無法實際統計發生大單的次數。</p>
+<p>解決方式則是把XTime設為IntrabarPersist．一旦這樣設定之後，XTime的數值就不會因為重新執行這根bar而被還原，也因此可以正確的統計到在當日出現大單的個數。</p>
 
 
 

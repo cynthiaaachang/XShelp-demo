@@ -21,7 +21,7 @@
     
     
       
-        <title>系統內建常數 - XSHelp</title>
+        <title>Var - XSHelp</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#var" class="md-skip">
           跳轉至
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              系統內建常數
+              Var
             
           </span>
         </div>
@@ -6401,57 +6401,33 @@
 
 
 
-<h1 id="_1">系統內建常數</h1>
-<p>以下為系統目前提供的內建常數名稱，以及常數所對應的數值。</p>
-<table>
-<thead>
-<tr>
-<th>常數名稱</th>
-<th>數值</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Friday</td>
-<td></td>
-</tr>
-<tr>
-<td>Monday</td>
-<td></td>
-</tr>
-<tr>
-<td>PI</td>
-<td></td>
-</tr>
-<tr>
-<td>Saturday</td>
-<td></td>
-</tr>
-<tr>
-<td>Sunday</td>
-<td></td>
-</tr>
-<tr>
-<td>Thursday</td>
-<td></td>
-</tr>
-<tr>
-<td>Tuesday</td>
-<td></td>
-</tr>
-<tr>
-<td>Wednesday</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p>在腳本內可以直接使用常數名稱，以增加可讀性，例如：</p>
-<div class="highlight"><pre><span></span><code>Value1 = PI;
+<h1 id="var">Var</h1>
+<p>Var 語法用來宣告變數，並且給定變數的預設值。</p>
+<p>系統會根據 Var 語法內給定的預設值的型態來決定變數的類型。目前系統提供以下三種變數類型:</p>
+<ul>
+<li>數值，例如 10, 5.3,</li>
+<li>字串, 例如 "String"，</li>
+<li>邏輯值, 例如 True, False</li>
+</ul>
+<p>語法如下:</p>
+<div class="highlight"><pre><span></span><code>Var: SumValue(0);
+Var: StrValue(&quot;&quot;);
+Var: Flag(True);
 </code></pre></div>
-<p>跟</p>
-<div class="highlight"><pre><span></span><code>Value1 = 3.14159
+<p>在上述的範例內宣告了三個變數:</p>
+<ul>
+<li>SumValue 是一個數值變數，初始值為0，</li>
+<li>StrValue 是一個字串變數，初始值為"" (空白字串)，</li>
+<li>Flag 是一個邏輯變數，初始值為True</li>
+</ul>
+<p>多個變數也可以在同一行內宣告，例如可以把上述範例寫成:</p>
+<div class="highlight"><pre><span></span><code>Var: SumValue(0), StrValue(&quot;&quot;), Flag(True);
 </code></pre></div>
-<p>是一樣的意思，可是程式讀起來會比較清楚。</p>
+<p>除了 Var 語法之外，也可以使用 Vars 語法，Variable 語法，或是 Variables 語法來宣告變數，範例如下：
+<div class="highlight"><pre><span></span><code>Vars: SumValue(0);
+Variable: StrValue(&quot;&quot;);
+Variables: Flag(True);
+</code></pre></div></p>
 
 
 

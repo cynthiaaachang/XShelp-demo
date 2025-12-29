@@ -21,7 +21,7 @@
     
     
       
-        <title>系統內建常數 - XSHelp</title>
+        <title>Input - XSHelp</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#input" class="md-skip">
           跳轉至
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              系統內建常數
+              Input
             
           </span>
         </div>
@@ -6401,57 +6401,61 @@
 
 
 
-<h1 id="_1">系統內建常數</h1>
-<p>以下為系統目前提供的內建常數名稱，以及常數所對應的數值。</p>
-<table>
-<thead>
-<tr>
-<th>常數名稱</th>
-<th>數值</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Friday</td>
-<td></td>
-</tr>
-<tr>
-<td>Monday</td>
-<td></td>
-</tr>
-<tr>
-<td>PI</td>
-<td></td>
-</tr>
-<tr>
-<td>Saturday</td>
-<td></td>
-</tr>
-<tr>
-<td>Sunday</td>
-<td></td>
-</tr>
-<tr>
-<td>Thursday</td>
-<td></td>
-</tr>
-<tr>
-<td>Tuesday</td>
-<td></td>
-</tr>
-<tr>
-<td>Wednesday</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p>在腳本內可以直接使用常數名稱，以增加可讀性，例如：</p>
-<div class="highlight"><pre><span></span><code>Value1 = PI;
+<h1 id="input">Input</h1>
+<p>Input 語法用來宣告腳本參數的名稱以及資料類型(也可以寫成 Inputs)。</p>
+<p>Input 的語法依照腳本類型而有差異。</p>
+<p>如果是指標腳本，警示腳本，或是選股腳本的話，則使用以下語法。以下是一個指標的範例：</p>
+<div class="highlight"><pre><span></span><code>Input: Length(10);
 </code></pre></div>
-<p>跟</p>
-<div class="highlight"><pre><span></span><code>Value1 = 3.14159
+<div class="highlight"><pre><span></span><code>Plot1(Average(Close, Length));
 </code></pre></div>
-<p>是一樣的意思，可是程式讀起來會比較清楚。</p>
+<p>在上述的指標範例內宣告了一個名為 Length 的參數，用來存放計算收盤價平均值的天期。這個參數的預設值為10，資料類型為數字。</p>
+<p>一旦宣告之後，程式內則可以像變數 Var 一樣的使用這個參數。可是跟變數不同的是，使用者在使用這個腳本時，可以透過參數設定的畫面來動態控制這個參數的數值。以下是設定指標時的參數設定畫面:</p>
+<p>Image: Input設定</p>
+<p>由於使用者可以在引用腳本時動態控制參數的數值，腳本的應用上會更有彈性。</p>
+<p>在上面的參數設定畫面內看到參數名稱顯示為 Length，也就是Input語法內設定的變數名稱。如果希望畫面上看到的參數名稱是中文的話，則可以在Input語法內傳入參數名稱:
+以下是修改後的範例:</p>
+<div class="highlight"><pre><span></span><code>Input: Length(10, &quot;天期&quot;);
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Plot1(Average(Close, Length));
+</code></pre></div>
+<p>底下是設定參數畫面:</p>
+<p>Image: Input設定2</p>
+<p>注意到畫面上出現的參數名稱已經變成 "天期"了。這樣子的作法可以讓腳本的使用上更為清楚。</p>
+<p>Input語法如果應用在函數腳本內的話，則必須使用不同的語法:</p>
+<div class="highlight"><pre><span></span><code>Input: Price(NumericSeries);
+Input: Length(NumericSimple);
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Value1 = Summation(Price, Length) / Length;
+</code></pre></div>
+<p>在上述範例內宣告了兩個參數，第一個參數叫做 Price，他的資料格式是一個數字序列，第二個參數叫做 Length，他的資料格式是一個數字(不是序列)。</p>
+<p><div class="highlight"><pre><span></span><code>Input: Price(NumericSeries,&quot;價格&quot;);
+Input: Length(NumericSimple,&quot;天期&quot;);
+</code></pre></div>
+在上述範例內宣告了兩個參數，第一個參數叫做 Price，他的資料格式是一個數字序列，且參數名稱為 價格；第二個參數叫做 Length，他的資料格式是一個數字(不是序列)，且參數名稱為 天期。</p>
+<div class="highlight"><pre><span></span><code>Input: Price(close,NumericSeries,&quot;價格&quot;);
+Input: Length(10,NumericSimple,&quot;天期&quot;);
+</code></pre></div>
+<p>在上述範例內宣告了兩個參數，第一個參數叫做 Price，預設值為 Close，他的資料格式是一個數字序列，參數名稱為 價格；第二個參數叫做 Length，預設值為 10，他的資料格式是一個數字(不是序列)，參數名稱為 天期。</p>
+<p>關於函數所支援的各種不同的參數類型，請參考以下章節:
+  * Numeric
+  * NumericSimple
+  * NumericSeries
+  * NumericRef
+  * NumericArray
+  * NumericArrayRef
+  * String
+  * StringSimple
+  * StringSeries
+  * StringRef
+  * StringArray
+  * StringArrayRef
+  * TrueFalse
+  * TrueFalseSimple
+  * TrueFalseSeries
+  * TrueFalseRef
+  * TrueFalseArray
+  * TrueFalseArrayRef</p>
 
 
 

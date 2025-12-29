@@ -21,7 +21,7 @@
     
     
       
-        <title>系統內建常數 - XSHelp</title>
+        <title>IF THEN ELSE - XSHelp</title>
       
     
     
@@ -61,11 +61,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#_1" class="md-skip">
-          跳轉至
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -98,7 +93,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              系統內建常數
+              IF THEN ELSE
             
           </span>
         </div>
@@ -6383,8 +6378,6 @@
   
   
   
-    
-  
   
 </nav>
                   </div>
@@ -6401,57 +6394,50 @@
 
 
 
-<h1 id="_1">系統內建常數</h1>
-<p>以下為系統目前提供的內建常數名稱，以及常數所對應的數值。</p>
-<table>
-<thead>
-<tr>
-<th>常數名稱</th>
-<th>數值</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Friday</td>
-<td></td>
-</tr>
-<tr>
-<td>Monday</td>
-<td></td>
-</tr>
-<tr>
-<td>PI</td>
-<td></td>
-</tr>
-<tr>
-<td>Saturday</td>
-<td></td>
-</tr>
-<tr>
-<td>Sunday</td>
-<td></td>
-</tr>
-<tr>
-<td>Thursday</td>
-<td></td>
-</tr>
-<tr>
-<td>Tuesday</td>
-<td></td>
-</tr>
-<tr>
-<td>Wednesday</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p>在腳本內可以直接使用常數名稱，以增加可讀性，例如：</p>
-<div class="highlight"><pre><span></span><code>Value1 = PI;
+  <h1>IF THEN ELSE</h1>
+
+<p>IF / THEN / ELSE</p>
+<p>使用 IF/THEN/ELSE 這三個語法來判斷某個條件成立時該執行那個動作，不成立時又該執行那個動作。</p>
+<p>如果只需要判斷某個條件成立時該執行那個動作，則使用以下的語法:</p>
+<div class="highlight"><pre><span></span><code>If Close &gt; Open Then Ret = 1;
 </code></pre></div>
-<p>跟</p>
-<div class="highlight"><pre><span></span><code>Value1 = 3.14159
+<p>在上述範例內如果Close值大於Open值的話則 Ret 變數的數值會被設定為1。</p>
+<p>如果當條件成立時需要執行多個指令的話，則使用Begin / End的語法來包圍所需要執行的指令。</p>
+<div class="highlight"><pre><span></span><code>If Close &gt; Open Then
+Begin
+    Value1 = Close - Open;
+    Value2 = High - Low;
+End;
 </code></pre></div>
-<p>是一樣的意思，可是程式讀起來會比較清楚。</p>
+<p>如果條件成立時跟不成立時都需要執行不同的指令的話，則可以加入 ELSE 語法來定義條件不成立時該執行的動作。</p>
+<div class="highlight"><pre><span></span><code>If Close &gt; Open Then
+    Value1 = Close - Open
+Else
+    Value1 = Open - Close;
+</code></pre></div>
+<p>在上述範例內當Close的數值不大於Open的數值時，程式會執行Else內的語法。以這個例子為例，Value1的數值就是這根bar的實體高度。</p>
+<p>同樣的，Else之後也可以使用Begin/End語法來定義多個指令，範例如下:</p>
+<div class="highlight"><pre><span></span><code>If Close &gt; Open Then
+Begin
+    Value1 = Close - Open;
+    Value2 = High - Low;
+End
+Else
+Begin
+    Value1 = Open - Close;
+    Value2 = High - Low;
+End;
+</code></pre></div>
+<p>Else後面也可以接if，用else if來進行多層次的條件判斷，從腳本上至下依序縮小判斷範圍，範例如下:</p>
+<div class="highlight"><pre><span></span><code>if value1 &lt; 0 then
+    value2 = 1
+else if value1 &lt; 10 then //等同於if  0 &lt;= value1 and value1 &lt; 10
+    value2 = 2
+else if value1 &lt; 20 then //等同於if  0 &lt;= value1 and value1 &lt; 10
+    value2 = 3
+else  //等同於if  20&lt;= value1
+    value2 = 4;
+</code></pre></div>
 
 
 

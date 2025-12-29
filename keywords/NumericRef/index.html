@@ -21,7 +21,7 @@
     
     
       
-        <title>系統內建常數 - XSHelp</title>
+        <title>NumericRef - XSHelp</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#numericref" class="md-skip">
           跳轉至
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              系統內建常數
+              NumericRef
             
           </span>
         </div>
@@ -6401,57 +6401,36 @@
 
 
 
-<h1 id="_1">系統內建常數</h1>
-<p>以下為系統目前提供的內建常數名稱，以及常數所對應的數值。</p>
-<table>
-<thead>
-<tr>
-<th>常數名稱</th>
-<th>數值</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Friday</td>
-<td></td>
-</tr>
-<tr>
-<td>Monday</td>
-<td></td>
-</tr>
-<tr>
-<td>PI</td>
-<td></td>
-</tr>
-<tr>
-<td>Saturday</td>
-<td></td>
-</tr>
-<tr>
-<td>Sunday</td>
-<td></td>
-</tr>
-<tr>
-<td>Thursday</td>
-<td></td>
-</tr>
-<tr>
-<td>Tuesday</td>
-<td></td>
-</tr>
-<tr>
-<td>Wednesday</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p>在腳本內可以直接使用常數名稱，以增加可讀性，例如：</p>
-<div class="highlight"><pre><span></span><code>Value1 = PI;
+<h1 id="numericref">NumericRef</h1>
+<p>(僅適用於函數腳本內)</p>
+<p>NumericRef 語法用來定義函數腳本的參數為數值型態，並且可以從函數內修改呼叫者傳入的數值。</p>
+<p>當一個函數變數被宣告成 Numeric 時，在函數內對這個數值的修改並不會影響呼叫者端傳入的變數，這個行為稱之為 Call By Value。</p>
+<p>如果有需要從函數內可以更改呼叫者端的變數的話，則可以使用 NumericRef 的語法，此時的行為會變成Call By Reference。
+<div class="highlight"><pre><span></span><code>// MACD function
+//  Input: Price序列, FastLength, SlowLength, MACDLength
+//  Output: DifValue, MACDValue, OscValue
+//
+Input: Price(numericseries);
+Input: FastLength(numericsimple);
+Input: SlowLength(numericsimple);
+Input: MACDLength(numericsimple);
+</code></pre></div></p>
+<div class="highlight"><pre><span></span><code>Input: DifValue(numericref);
+Input: MACDValue(numericref);
+Input: OscValue(numericref);
+DifValue = XAverage(price, FastLength) - XAverage(price, SlowLength);
+MACDValue = XAverage(DifValue, MACDLength) ;
+OscValue = DifValue - MACDValue;
 </code></pre></div>
-<p>跟</p>
-<div class="highlight"><pre><span></span><code>Value1 = 3.14159
+<p>在上述MACD函數內，呼叫者端傳入了價格序列(Price), 短天期(FastLength), 長天期(SlowLength)，以及MACD的天期(MACDLength)，函數內要算出 DIF 的數值, MACD 的數值, 以及 OSC 的數值。由於總共有三個數值需要回傳，所以利用 NumericRef 的方式來完成。</p>
+<p>呼叫者端的程式碼範例如下：</p>
+<div class="highlight"><pre><span></span><code>input: FastLength(12), SlowLength(26), MACDLength(9);
+variable: difValue(0), macdValue(0), oscValue(0);
+MACD(Close, FastLength, SlowLength, MACDLength, difValue, macdValue, oscValue);
 </code></pre></div>
-<p>是一樣的意思，可是程式讀起來會比較清楚。</p>
+<div class="highlight"><pre><span></span><code>Ret = difValue Crosses Above macdValue;
+</code></pre></div>
+<p>注意到當呼叫完 MACD 函數後, difValue, macdValue, 以及 oscValue 的數值都會從MACD函數內回傳。</p>
 
 
 

@@ -546,7 +546,62 @@
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        其他
+        宣告變數
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        宣告陣列
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        宣告輸入
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        宣告數值輸入 ( 函數 )
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        宣告字串輸入 ( 函數 )
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        宣告布林輸入 ( 函數 )
       
     </span>
   </a>
@@ -6460,7 +6515,62 @@
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        其他
+        宣告變數
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        宣告陣列
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        宣告輸入
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        宣告數值輸入 ( 函數 )
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        宣告字串輸入 ( 函數 )
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        宣告布林輸入 ( 函數 )
       
     </span>
   </a>
@@ -6485,72 +6595,50 @@
 
 
 <h1 id="_1">宣告</h1>
-<p>宣告相關關鍵字主要用於建立變數、陣列與輸入參數，方便腳本在運算過程中儲存與重複使用資料。</p>
-<h2 id="_2">其他</h2>
-<p><code>Adjusted</code><br />
-<code>Array</code><br />
-<code>Arrays</code><br />
-<code>Asc</code><br />
-<code>Axis</code><br />
-<code>axis</code><br />
-<code>Bool</code><br />
-<code>Checkbox</code><br />
-<code>checkbox</code><br />
-<code>Condition</code><br />
-<code>condition</code><br />
-<code>Daterange</code><br />
-<code>daterange</code><br />
-<code>Default</code><br />
-<code>Desc</code><br />
-<code>Dict</code><br />
-<code>dict</code><br />
-<code>Double</code><br />
-<code>Float</code><br />
-<code>Group</code><br />
-<code>Input</code><br />
-<code>Inputkind</code><br />
-<code>inputkind</code><br />
-<code>Inputs</code><br />
-<code>Int</code><br />
-<code>IntraBarPersist</code><br />
-<code>Numeric</code><br />
-<code>NumericArray</code><br />
-<code>NumericArrayRef</code><br />
-<code>NumericRef</code><br />
-<code>NumericSeries</code><br />
-<code>NumericSimple</code><br />
-<code>Order</code><br />
-<code>order</code><br />
-<code>Param</code><br />
-<code>param</code><br />
-<code>Quickedit</code><br />
-<code>quickedit</code><br />
-<code>Rank</code><br />
-<code>Ret</code><br />
-<code>RetMsg</code><br />
-<code>RetSound</code><br />
-<code>RetVal</code><br />
-<code>String</code><br />
-<code>StringArray</code><br />
-<code>StringArrayRef</code><br />
-<code>StringRef</code><br />
-<code>StringSeries</code><br />
-<code>StringSimple</code><br />
-<code>SymbolGroup</code><br />
-<code>Symbolprice</code><br />
-<code>symbolprice</code><br />
-<code>TrueFalse</code><br />
-<code>TrueFalseArray</code><br />
-<code>TrueFalseArrayRef</code><br />
-<code>TrueFalseRef</code><br />
-<code>TrueFalseSeries</code><br />
-<code>TrueFalseSimple</code><br />
-<code>Value</code><br />
-<code>value</code><br />
-<code>Var</code><br />
-<code>Variable</code><br />
-<code>Variables</code><br />
-<code>Vars</code>  </p>
+<p>宣告是在腳本中引入變數使用，變數是用來存放計算後的數值，方便重複使用或增加腳本的可讀性。</p>
+<p>變數需要先經過宣告的程序後才能使用，並且在宣告的同時也需要指定變數的類型、名稱或初始值等變數的屬性。</p>
+<p>在XSscript中，一共有下列宣告變數的語法：</p>
+<h3 id="_2">宣告變數</h3>
+<ul>
+<li><a href="../Var/">Var ( <code>Variable</code> ‧ <code>Variables</code> ‧ <code>Vars</code> )</a></li>
+<li><a href="../IntrabarPersist/">IntrabarPersist</a></li>
+</ul>
+<h3 id="_3">宣告陣列</h3>
+<ul>
+<li><a href="../Array/">Array ( <code>Arrays</code> )</a></li>
+</ul>
+<h3 id="_4">宣告輸入</h3>
+<ul>
+<li><a href="../Input/">Input ( <code>Inputs</code> )</a></li>
+<li><a href="../inputkind/">inputkind ( <code>inputkind</code> )</a></li>
+</ul>
+<h3 id="_5">宣告數值輸入 ( 函數 )</h3>
+<ul>
+<li><a href="../Numeric/">Numeric</a></li>
+<li><a href="../Numeric/">NumericSimple</a></li>
+<li><a href="../Numeric/">NumericSeries</a></li>
+<li><a href="../NumericRef/">NumericRef</a></li>
+<li><a href="../NumericArray/">NumericArray</a></li>
+<li><a href="../NumericArrayRef/">NumericArrayRef</a></li>
+</ul>
+<h3 id="_6">宣告字串輸入 ( 函數 )</h3>
+<ul>
+<li><a href="../String/">String</a></li>
+<li><a href="../String/">StringSimple</a></li>
+<li><a href="../String/">StringSeries</a></li>
+<li><a href="../StringRef/">StringRef</a></li>
+<li><a href="../StringArray/">StringArray</a></li>
+<li><a href="../StringArrayRef/">StringArrayRef</a></li>
+</ul>
+<h3 id="_7">宣告布林輸入 ( 函數 )</h3>
+<ul>
+<li><a href="../TrueFalse/">TrueFalse</a></li>
+<li><a href="../TrueFalse/">TrueFalseSimple</a></li>
+<li><a href="../TrueFalse/">TrueFalseSeries</a></li>
+<li><a href="../TrueFalseRef/">TrueFalseRef</a></li>
+<li><a href="../TrueFalseArray/">TrueFalseArray</a></li>
+<li><a href="../TrueFalseArrayRef/">TrueFalseArrayRef</a></li>
+</ul>
 
 
 

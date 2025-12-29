@@ -21,7 +21,7 @@
     
     
       
-        <title>系統內建常數 - XSHelp</title>
+        <title>Cross Above Cross Below - XSHelp</title>
       
     
     
@@ -61,11 +61,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#_1" class="md-skip">
-          跳轉至
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -98,7 +93,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              系統內建常數
+              Cross Above   Cross Below
             
           </span>
         </div>
@@ -6383,8 +6378,6 @@
   
   
   
-    
-  
   
 </nav>
                   </div>
@@ -6401,57 +6394,23 @@
 
 
 
-<h1 id="_1">系統內建常數</h1>
-<p>以下為系統目前提供的內建常數名稱，以及常數所對應的數值。</p>
-<table>
-<thead>
-<tr>
-<th>常數名稱</th>
-<th>數值</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Friday</td>
-<td></td>
-</tr>
-<tr>
-<td>Monday</td>
-<td></td>
-</tr>
-<tr>
-<td>PI</td>
-<td></td>
-</tr>
-<tr>
-<td>Saturday</td>
-<td></td>
-</tr>
-<tr>
-<td>Sunday</td>
-<td></td>
-</tr>
-<tr>
-<td>Thursday</td>
-<td></td>
-</tr>
-<tr>
-<td>Tuesday</td>
-<td></td>
-</tr>
-<tr>
-<td>Wednesday</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p>在腳本內可以直接使用常數名稱，以增加可讀性，例如：</p>
-<div class="highlight"><pre><span></span><code>Value1 = PI;
+  <h1>Cross Above   Cross Below</h1>
+
+<p>Cross Above / Cross Below</p>
+<p>Cross 相關的語法共有兩種：</p>
+<ul>
+<li>Cross Above 或是 Cross Over 是用來檢查目前的欄位數值是否 向上穿越 某個欄位的前期數值。</li>
+<li>Cross Below 或是 Cross Under 則是用來檢查目前的欄位數值是否 向下跌破 某個欄位的前期數值。</li>
+</ul>
+<p>以下是 向上穿越 均線的寫法：</p>
+<div class="highlight"><pre><span></span><code>If Close Cross Above Average(Close, 5) Then ret = 1;
 </code></pre></div>
-<p>跟</p>
-<div class="highlight"><pre><span></span><code>Value1 = 3.14159
+<p>當這一期的Close欄位大於等於近5期的平均值(Average(Close,5))且前一期的Close欄位小於前一期的近5期的平均值的話，則ret會被設定成1。</p>
+<p>以下則是 向下跌破均線 的寫法：</p>
+<div class="highlight"><pre><span></span><code>If Close Cross Below Average(Close, 5) Then ret = 1;
 </code></pre></div>
-<p>是一樣的意思，可是程式讀起來會比較清楚。</p>
+<p>如果這一期的Close欄位小於等於近5期的平均值(Average(Close,5))且前一期的Close欄位大於前一期的近5期的平均值的話，則ret會被設定成1。</p>
+<p>Cross 也可以寫成 Crosses。</p>
 
 
 
