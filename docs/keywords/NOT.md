@@ -1,0 +1,19 @@
+# NOT
+
+## 說明
+NOT語法回傳運算式的相反值。
+
+請看以下的範例程式：
+
+```xs
+If Close > Close[1] Then Ret = 1;
+```
+這個例子會在Close值大於Close的前期值時設定Ret為1。
+
+如果使用者希望的是在Close值**不是**大於Close的前期值時才設定Ret為1的話，則可以寫成：
+
+```xs
+If Not (Close > Close[1]) Then Ret = 1;
+```
+
+上述的範例會在Close值**不是**大於Close的前期值時設定Ret為1。

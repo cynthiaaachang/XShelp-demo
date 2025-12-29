@@ -27,7 +27,7 @@ nav:
 - 檢視紀錄:
   - 介紹: search-history/view.md
 - 關鍵字:
-  - 總覽: keywords/README.md
+  - 總覽: keywords/index.md
   - 忽略字: keywords/ignore.md
   - 常數: keywords/constant.md
   - 流程控制: keywords/flow.md
